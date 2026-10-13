@@ -1,11 +1,11 @@
 # 🏨 Hotel Booking Cancellation Prediction
 ### Otel Rezervasyon İptal Tahmini
 
-**ATM​​ACA Team | BIL545 – Veri Madenciliği Projesi**
+**ATM​​ACA Team | BIL545 – İleri Veri Madenciliği Projesi**
 
 ## 📌 Proje Hakkında
 
-Bu proje, **BIL545 – Veri Madenciliği** dersi kapsamında, otel rezervasyonlarının iptal edilme durumlarını veri madenciliği ve makine öğrenmesi yöntemleriyle analiz etmek ve tahmin etmek amacıyla hazırlanmıştır.
+Bu proje, **BIL545 – İleri Veri Madenciliği** dersi kapsamında, otel rezervasyonlarının iptal edilme durumlarını veri madenciliği ve makine öğrenmesi yöntemleriyle analiz etmek ve tahmin etmek amacıyla hazırlanmıştır.
 
 Çalışmada **Hotel Booking Demand** veri seti kullanılmaktadır. Rezervasyonlara ilişkin çeşitli özellikler incelenerek iptal davranışlarıyla ilişkili değişkenlerin belirlenmesi ve rezervasyon iptallerini tahmin edebilen sınıflandırma modellerinin geliştirilmesi hedeflenmektedir.
 
@@ -103,7 +103,7 @@ Proje 2'ye ilişkin yöntemler, deneyler ve sonuçlar çalışmalar ilerledikçe
 
 ## 🎓 Akademik Bilgiler
 
-**Ders:** BIL545 – Veri Madenciliği
+**Ders:** BIL545 – İleri Veri Madenciliği
 
 **Proje konusu:** Otel Rezervasyonlarında İptal Tahmini
 
