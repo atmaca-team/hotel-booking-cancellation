@@ -1,0 +1,46 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.ZeroR 
+Relation:     hotel_booking_weka-weka.filters.unsupervised.attribute.NumericToNominal-Rlast
+Instances:    119390
+Attributes:   7
+              agent
+              hotel
+              distribution_channel
+              lead_time
+              adults
+              previous_cancellations
+              is_canceled
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: 0
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       75166               62.9584 %
+Incorrectly Classified Instances     44224               37.0416 %
+Kappa statistic                          0     
+Mean absolute error                      0.4664
+Root mean squared error                  0.4829
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances           119390     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.630      1.000    0.773      ?        0.500     0.630     0
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.370     1
+Weighted Avg.    0.630    0.630    ?          0.630    ?          ?        0.500     0.534     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 75166     0 |     a = 0
+ 44224     0 |     b = 1
+

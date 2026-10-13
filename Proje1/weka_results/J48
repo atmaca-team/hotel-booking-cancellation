@@ -1,0 +1,2265 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     hotel_booking_weka-weka.filters.unsupervised.attribute.NumericToNominal-Rlast
+Instances:    119390
+Attributes:   7
+              agent
+              hotel
+              distribution_channel
+              lead_time
+              adults
+              previous_cancellations
+              is_canceled
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+previous_cancellations <= 0
+|   lead_time <= 14: 0 (26028.0/3137.0)
+|   lead_time > 14
+|   |   agent = EKSIK
+|   |   |   hotel = Resort Hotel
+|   |   |   |   lead_time <= 400
+|   |   |   |   |   distribution_channel = Direct
+|   |   |   |   |   |   lead_time <= 345
+|   |   |   |   |   |   |   lead_time <= 159
+|   |   |   |   |   |   |   |   lead_time <= 147: 0 (1229.0/238.0)
+|   |   |   |   |   |   |   |   lead_time > 147
+|   |   |   |   |   |   |   |   |   lead_time <= 149: 1 (42.0/2.0)
+|   |   |   |   |   |   |   |   |   lead_time > 149
+|   |   |   |   |   |   |   |   |   |   lead_time <= 154: 0 (44.0/1.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 154: 1 (53.0/23.0)
+|   |   |   |   |   |   |   lead_time > 159
+|   |   |   |   |   |   |   |   lead_time <= 297: 0 (375.0/23.0)
+|   |   |   |   |   |   |   |   lead_time > 297
+|   |   |   |   |   |   |   |   |   adults <= 4
+|   |   |   |   |   |   |   |   |   |   lead_time <= 302
+|   |   |   |   |   |   |   |   |   |   |   adults <= 1: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   adults > 1: 1 (21.0/6.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 302: 0 (104.0/3.0)
+|   |   |   |   |   |   |   |   |   adults > 4: 1 (9.0)
+|   |   |   |   |   |   lead_time > 345
+|   |   |   |   |   |   |   lead_time <= 375
+|   |   |   |   |   |   |   |   adults <= 10: 0 (4.0)
+|   |   |   |   |   |   |   |   adults > 10: 1 (2.0)
+|   |   |   |   |   |   |   lead_time > 375: 1 (22.0)
+|   |   |   |   |   distribution_channel = Corporate
+|   |   |   |   |   |   lead_time <= 240
+|   |   |   |   |   |   |   lead_time <= 39: 0 (368.0/59.0)
+|   |   |   |   |   |   |   lead_time > 39
+|   |   |   |   |   |   |   |   lead_time <= 40: 1 (23.0/2.0)
+|   |   |   |   |   |   |   |   lead_time > 40
+|   |   |   |   |   |   |   |   |   lead_time <= 59: 0 (33.0/2.0)
+|   |   |   |   |   |   |   |   |   lead_time > 59
+|   |   |   |   |   |   |   |   |   |   adults <= 1
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 60: 1 (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 60: 0 (64.0/12.0)
+|   |   |   |   |   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 123
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 77
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 73
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 70
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adults <= 2: 1 (33.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adults > 2: 0 (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 70: 0 (21.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 73: 1 (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 77
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 81: 0 (27.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 81
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 111
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 91: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 91: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 111: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 123
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 134: 1 (47.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 134
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 226: 0 (13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 226: 1 (9.0)
+|   |   |   |   |   |   lead_time > 240: 0 (270.0/15.0)
+|   |   |   |   |   distribution_channel = TA/TO
+|   |   |   |   |   |   adults <= 1: 0 (89.0/7.0)
+|   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   lead_time <= 266
+|   |   |   |   |   |   |   |   lead_time <= 151
+|   |   |   |   |   |   |   |   |   lead_time <= 106
+|   |   |   |   |   |   |   |   |   |   lead_time <= 77
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 72: 0 (52.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 72: 1 (11.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 77: 0 (27.0/4.0)
+|   |   |   |   |   |   |   |   |   lead_time > 106
+|   |   |   |   |   |   |   |   |   |   lead_time <= 140
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 137
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 113: 1 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 113
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 125: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 125: 1 (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 137: 1 (52.0/2.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 140
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 150: 0 (18.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 150: 1 (12.0/2.0)
+|   |   |   |   |   |   |   |   lead_time > 151: 0 (212.0/44.0)
+|   |   |   |   |   |   |   lead_time > 266
+|   |   |   |   |   |   |   |   lead_time <= 325
+|   |   |   |   |   |   |   |   |   lead_time <= 280: 1 (28.0)
+|   |   |   |   |   |   |   |   |   lead_time > 280
+|   |   |   |   |   |   |   |   |   |   lead_time <= 321: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 321: 1 (20.0)
+|   |   |   |   |   |   |   |   lead_time > 325: 0 (8.0)
+|   |   |   |   |   distribution_channel = Undefined: 0 (1.0)
+|   |   |   |   |   distribution_channel = GDS: 0 (0.0)
+|   |   |   |   lead_time > 400
+|   |   |   |   |   distribution_channel = Direct: 0 (2.0)
+|   |   |   |   |   distribution_channel = Corporate: 1 (0.0)
+|   |   |   |   |   distribution_channel = TA/TO: 1 (45.0)
+|   |   |   |   |   distribution_channel = Undefined: 1 (0.0)
+|   |   |   |   |   distribution_channel = GDS: 1 (0.0)
+|   |   |   hotel = City Hotel
+|   |   |   |   distribution_channel = Direct
+|   |   |   |   |   lead_time <= 90
+|   |   |   |   |   |   lead_time <= 43: 0 (307.0/65.0)
+|   |   |   |   |   |   lead_time > 43
+|   |   |   |   |   |   |   lead_time <= 55
+|   |   |   |   |   |   |   |   lead_time <= 49
+|   |   |   |   |   |   |   |   |   adults <= 1
+|   |   |   |   |   |   |   |   |   |   lead_time <= 48: 1 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 48: 0 (3.0)
+|   |   |   |   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   |   |   |   lead_time <= 44: 1 (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 44: 0 (24.0/5.0)
+|   |   |   |   |   |   |   |   lead_time > 49
+|   |   |   |   |   |   |   |   |   lead_time <= 50: 1 (25.0/3.0)
+|   |   |   |   |   |   |   |   |   lead_time > 50: 0 (18.0/6.0)
+|   |   |   |   |   |   |   lead_time > 55: 0 (143.0/30.0)
+|   |   |   |   |   lead_time > 90
+|   |   |   |   |   |   lead_time <= 93: 1 (59.0/3.0)
+|   |   |   |   |   |   lead_time > 93
+|   |   |   |   |   |   |   lead_time <= 144: 0 (100.0/25.0)
+|   |   |   |   |   |   |   lead_time > 144
+|   |   |   |   |   |   |   |   lead_time <= 152
+|   |   |   |   |   |   |   |   |   lead_time <= 146
+|   |   |   |   |   |   |   |   |   |   lead_time <= 145: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 145: 0 (4.0)
+|   |   |   |   |   |   |   |   |   lead_time > 146: 1 (25.0/1.0)
+|   |   |   |   |   |   |   |   lead_time > 152
+|   |   |   |   |   |   |   |   |   lead_time <= 286
+|   |   |   |   |   |   |   |   |   |   lead_time <= 254
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 185
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 179
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 164
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 162: 0 (22.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 162: 1 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 164: 0 (26.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 179: 1 (19.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 185: 0 (26.0/3.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 254: 1 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   lead_time > 286
+|   |   |   |   |   |   |   |   |   |   lead_time <= 354: 0 (18.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 354: 1 (2.0)
+|   |   |   |   distribution_channel = Corporate
+|   |   |   |   |   lead_time <= 36
+|   |   |   |   |   |   adults <= 1: 0 (250.0/37.0)
+|   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   lead_time <= 25: 0 (56.0/11.0)
+|   |   |   |   |   |   |   lead_time > 25
+|   |   |   |   |   |   |   |   lead_time <= 27: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   lead_time > 27: 0 (25.0/5.0)
+|   |   |   |   |   lead_time > 36
+|   |   |   |   |   |   lead_time <= 38: 1 (107.0/5.0)
+|   |   |   |   |   |   lead_time > 38
+|   |   |   |   |   |   |   lead_time <= 91
+|   |   |   |   |   |   |   |   lead_time <= 74
+|   |   |   |   |   |   |   |   |   lead_time <= 68: 0 (136.0/26.0)
+|   |   |   |   |   |   |   |   |   lead_time > 68
+|   |   |   |   |   |   |   |   |   |   lead_time <= 70: 1 (35.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 70
+|   |   |   |   |   |   |   |   |   |   |   adults <= 1: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   adults > 1: 1 (6.0)
+|   |   |   |   |   |   |   |   lead_time > 74
+|   |   |   |   |   |   |   |   |   lead_time <= 86: 0 (55.0/13.0)
+|   |   |   |   |   |   |   |   |   lead_time > 86: 1 (17.0/1.0)
+|   |   |   |   |   |   |   lead_time > 91
+|   |   |   |   |   |   |   |   lead_time <= 215: 0 (143.0/8.0)
+|   |   |   |   |   |   |   |   lead_time > 215: 1 (15.0/2.0)
+|   |   |   |   distribution_channel = TA/TO
+|   |   |   |   |   lead_time <= 102
+|   |   |   |   |   |   lead_time <= 24: 0 (99.0/8.0)
+|   |   |   |   |   |   lead_time > 24
+|   |   |   |   |   |   |   lead_time <= 28
+|   |   |   |   |   |   |   |   lead_time <= 27
+|   |   |   |   |   |   |   |   |   lead_time <= 25: 1 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   lead_time > 25: 0 (10.0)
+|   |   |   |   |   |   |   |   lead_time > 27: 1 (100.0/1.0)
+|   |   |   |   |   |   |   lead_time > 28
+|   |   |   |   |   |   |   |   lead_time <= 30: 0 (26.0)
+|   |   |   |   |   |   |   |   lead_time > 30
+|   |   |   |   |   |   |   |   |   adults <= 1
+|   |   |   |   |   |   |   |   |   |   lead_time <= 54
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 32: 1 (19.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 32
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 43
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 41: 0 (28.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 41: 1 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 43: 0 (56.0/1.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 54
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 62: 1 (89.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 62
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 93: 0 (94.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 93
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 97: 1 (49.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 97
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 100: 0 (46.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 100
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 101: 1 (19.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 101: 0 (16.0)
+|   |   |   |   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   |   |   |   lead_time <= 67
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 56: 1 (192.0/53.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 56
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 60: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 60: 1 (58.0/7.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 67
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 71: 0 (33.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 71
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 101
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 100
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 80: 1 (19.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 80: 0 (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 100: 1 (15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 101: 0 (6.0)
+|   |   |   |   |   lead_time > 102
+|   |   |   |   |   |   adults <= 1: 1 (378.0/4.0)
+|   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   lead_time <= 225
+|   |   |   |   |   |   |   |   lead_time <= 145
+|   |   |   |   |   |   |   |   |   lead_time <= 113: 1 (50.0/1.0)
+|   |   |   |   |   |   |   |   |   lead_time > 113: 0 (37.0/1.0)
+|   |   |   |   |   |   |   |   lead_time > 145
+|   |   |   |   |   |   |   |   |   lead_time <= 173: 1 (92.0/1.0)
+|   |   |   |   |   |   |   |   |   lead_time > 173
+|   |   |   |   |   |   |   |   |   |   lead_time <= 181: 0 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 181
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 220
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 199
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 192: 1 (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 192: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 199: 1 (49.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 220: 0 (7.0)
+|   |   |   |   |   |   |   lead_time > 225: 1 (288.0/2.0)
+|   |   |   |   distribution_channel = Undefined: 1 (0.0)
+|   |   |   |   distribution_channel = GDS: 0 (1.0)
+|   |   agent = A304: 0 (0.0)
+|   |   agent = A240
+|   |   |   lead_time <= 94: 0 (5425.0/2281.0)
+|   |   |   lead_time > 94
+|   |   |   |   hotel = Resort Hotel
+|   |   |   |   |   lead_time <= 301
+|   |   |   |   |   |   distribution_channel = Direct: 0 (3.0)
+|   |   |   |   |   |   distribution_channel = Corporate: 0 (1.0)
+|   |   |   |   |   |   distribution_channel = TA/TO
+|   |   |   |   |   |   |   adults <= 2
+|   |   |   |   |   |   |   |   lead_time <= 285: 1 (4187.0/1858.0)
+|   |   |   |   |   |   |   |   lead_time > 285: 0 (121.0/49.0)
+|   |   |   |   |   |   |   adults > 2: 1 (147.0/55.0)
+|   |   |   |   |   |   distribution_channel = Undefined: 1 (0.0)
+|   |   |   |   |   |   distribution_channel = GDS: 1 (0.0)
+|   |   |   |   |   lead_time > 301
+|   |   |   |   |   |   distribution_channel = Direct: 0 (2.0)
+|   |   |   |   |   |   distribution_channel = Corporate: 1 (0.0)
+|   |   |   |   |   |   distribution_channel = TA/TO: 1 (367.0/94.0)
+|   |   |   |   |   |   distribution_channel = Undefined: 1 (0.0)
+|   |   |   |   |   |   distribution_channel = GDS: 1 (0.0)
+|   |   |   |   hotel = City Hotel: 0 (15.0/1.0)
+|   |   agent = A303: 0 (0.0)
+|   |   agent = A15
+|   |   |   lead_time <= 303
+|   |   |   |   lead_time <= 226
+|   |   |   |   |   hotel = Resort Hotel
+|   |   |   |   |   |   lead_time <= 55: 0 (50.0/12.0)
+|   |   |   |   |   |   lead_time > 55
+|   |   |   |   |   |   |   lead_time <= 69
+|   |   |   |   |   |   |   |   lead_time <= 63
+|   |   |   |   |   |   |   |   |   lead_time <= 61: 1 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   lead_time > 61: 0 (2.0)
+|   |   |   |   |   |   |   |   lead_time > 63: 1 (16.0)
+|   |   |   |   |   |   |   lead_time > 69
+|   |   |   |   |   |   |   |   lead_time <= 160: 0 (40.0/13.0)
+|   |   |   |   |   |   |   |   lead_time > 160
+|   |   |   |   |   |   |   |   |   lead_time <= 208
+|   |   |   |   |   |   |   |   |   |   lead_time <= 176: 1 (19.0/1.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 176: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   lead_time > 208: 1 (3.0)
+|   |   |   |   |   hotel = City Hotel: 0 (110.0/23.0)
+|   |   |   |   lead_time > 226: 0 (49.0/2.0)
+|   |   |   lead_time > 303: 1 (18.0/1.0)
+|   |   agent = A241: 0 (1302.0/217.0)
+|   |   agent = A8: 0 (1227.0/355.0)
+|   |   agent = A250
+|   |   |   lead_time <= 207: 0 (1774.0/357.0)
+|   |   |   lead_time > 207
+|   |   |   |   lead_time <= 323: 0 (205.0/63.0)
+|   |   |   |   lead_time > 323: 1 (14.0/4.0)
+|   |   agent = A115: 0 (181.0/11.0)
+|   |   agent = A5
+|   |   |   hotel = Resort Hotel
+|   |   |   |   adults <= 1
+|   |   |   |   |   lead_time <= 95: 1 (5.0/1.0)
+|   |   |   |   |   lead_time > 95: 0 (4.0)
+|   |   |   |   adults > 1
+|   |   |   |   |   lead_time <= 156: 0 (127.0/22.0)
+|   |   |   |   |   lead_time > 156
+|   |   |   |   |   |   adults <= 2: 0 (20.0/8.0)
+|   |   |   |   |   |   adults > 2: 1 (5.0/1.0)
+|   |   |   hotel = City Hotel: 1 (28.0)
+|   |   agent = A175: 0 (168.0/44.0)
+|   |   agent = A134
+|   |   |   lead_time <= 116
+|   |   |   |   lead_time <= 78
+|   |   |   |   |   lead_time <= 42: 0 (11.0/2.0)
+|   |   |   |   |   lead_time > 42
+|   |   |   |   |   |   lead_time <= 76
+|   |   |   |   |   |   |   lead_time <= 62
+|   |   |   |   |   |   |   |   lead_time <= 45: 1 (26.0/1.0)
+|   |   |   |   |   |   |   |   lead_time > 45
+|   |   |   |   |   |   |   |   |   lead_time <= 49: 0 (2.0)
+|   |   |   |   |   |   |   |   |   lead_time > 49: 1 (3.0)
+|   |   |   |   |   |   |   lead_time > 62: 0 (7.0)
+|   |   |   |   |   |   lead_time > 76: 1 (29.0/1.0)
+|   |   |   |   lead_time > 78
+|   |   |   |   |   lead_time <= 115
+|   |   |   |   |   |   lead_time <= 113
+|   |   |   |   |   |   |   adults <= 1
+|   |   |   |   |   |   |   |   lead_time <= 111: 1 (2.0)
+|   |   |   |   |   |   |   |   lead_time > 111: 0 (4.0)
+|   |   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   |   lead_time <= 87: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   lead_time > 87
+|   |   |   |   |   |   |   |   |   adults <= 2
+|   |   |   |   |   |   |   |   |   |   lead_time <= 90: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 90
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 98: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 98: 1 (48.0/16.0)
+|   |   |   |   |   |   |   |   |   adults > 2: 0 (3.0)
+|   |   |   |   |   |   lead_time > 113: 0 (46.0/6.0)
+|   |   |   |   |   lead_time > 115: 1 (71.0/24.0)
+|   |   |   lead_time > 116
+|   |   |   |   lead_time <= 173
+|   |   |   |   |   lead_time <= 162: 0 (16.0/1.0)
+|   |   |   |   |   lead_time > 162: 1 (3.0)
+|   |   |   |   lead_time > 173: 0 (14.0)
+|   |   agent = A156: 0 (174.0/15.0)
+|   |   agent = A243: 0 (506.0/24.0)
+|   |   agent = A242: 0 (660.0/241.0)
+|   |   agent = A3
+|   |   |   lead_time <= 378
+|   |   |   |   adults <= 1
+|   |   |   |   |   lead_time <= 185
+|   |   |   |   |   |   lead_time <= 160: 0 (58.0/15.0)
+|   |   |   |   |   |   lead_time > 160: 1 (28.0/2.0)
+|   |   |   |   |   lead_time > 185: 0 (56.0)
+|   |   |   |   adults > 1
+|   |   |   |   |   lead_time <= 158
+|   |   |   |   |   |   lead_time <= 130
+|   |   |   |   |   |   |   lead_time <= 68
+|   |   |   |   |   |   |   |   lead_time <= 66
+|   |   |   |   |   |   |   |   |   lead_time <= 30: 1 (54.0/3.0)
+|   |   |   |   |   |   |   |   |   lead_time > 30
+|   |   |   |   |   |   |   |   |   |   hotel = Resort Hotel: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   hotel = City Hotel
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 40
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 38
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 33: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 33: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 38: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 40
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 48: 1 (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 48: 0 (44.0/16.0)
+|   |   |   |   |   |   |   |   lead_time > 66: 1 (64.0)
+|   |   |   |   |   |   |   lead_time > 68
+|   |   |   |   |   |   |   |   lead_time <= 95: 0 (102.0/24.0)
+|   |   |   |   |   |   |   |   lead_time > 95
+|   |   |   |   |   |   |   |   |   lead_time <= 106: 1 (46.0/1.0)
+|   |   |   |   |   |   |   |   |   lead_time > 106
+|   |   |   |   |   |   |   |   |   |   lead_time <= 113: 0 (25.0/2.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 113
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 122: 1 (22.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 122: 0 (11.0/2.0)
+|   |   |   |   |   |   lead_time > 130
+|   |   |   |   |   |   |   hotel = Resort Hotel: 0 (7.0/2.0)
+|   |   |   |   |   |   |   hotel = City Hotel
+|   |   |   |   |   |   |   |   lead_time <= 140: 1 (79.0/1.0)
+|   |   |   |   |   |   |   |   lead_time > 140
+|   |   |   |   |   |   |   |   |   lead_time <= 141: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   lead_time > 141: 1 (50.0/2.0)
+|   |   |   |   |   lead_time > 158
+|   |   |   |   |   |   lead_time <= 229
+|   |   |   |   |   |   |   lead_time <= 204
+|   |   |   |   |   |   |   |   lead_time <= 197
+|   |   |   |   |   |   |   |   |   lead_time <= 190
+|   |   |   |   |   |   |   |   |   |   lead_time <= 162: 0 (62.0/9.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 162
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 174: 1 (28.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 174
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 177: 0 (21.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 177: 1 (58.0/24.0)
+|   |   |   |   |   |   |   |   |   lead_time > 190
+|   |   |   |   |   |   |   |   |   |   lead_time <= 193: 0 (14.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 193
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 196: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 196: 0 (6.0)
+|   |   |   |   |   |   |   |   lead_time > 197: 1 (21.0)
+|   |   |   |   |   |   |   lead_time > 204: 0 (58.0/2.0)
+|   |   |   |   |   |   lead_time > 229
+|   |   |   |   |   |   |   lead_time <= 261: 1 (40.0)
+|   |   |   |   |   |   |   lead_time > 261
+|   |   |   |   |   |   |   |   lead_time <= 288: 0 (12.0)
+|   |   |   |   |   |   |   |   lead_time > 288
+|   |   |   |   |   |   |   |   |   lead_time <= 290: 1 (19.0/7.0)
+|   |   |   |   |   |   |   |   |   lead_time > 290
+|   |   |   |   |   |   |   |   |   |   lead_time <= 300: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 300: 1 (40.0/18.0)
+|   |   |   lead_time > 378: 1 (42.0)
+|   |   agent = A105: 0 (14.0/4.0)
+|   |   agent = A40: 0 (957.0/79.0)
+|   |   agent = A147
+|   |   |   hotel = Resort Hotel: 0 (127.0/31.0)
+|   |   |   hotel = City Hotel: 1 (7.0)
+|   |   agent = A306: 0 (0.0)
+|   |   agent = A184
+|   |   |   adults <= 1: 0 (8.0/3.0)
+|   |   |   adults > 1: 1 (4.0/1.0)
+|   |   agent = A96
+|   |   |   lead_time <= 242
+|   |   |   |   lead_time <= 230
+|   |   |   |   |   lead_time <= 84
+|   |   |   |   |   |   lead_time <= 64
+|   |   |   |   |   |   |   lead_time <= 62: 0 (18.0/1.0)
+|   |   |   |   |   |   |   lead_time > 62: 1 (4.0)
+|   |   |   |   |   |   lead_time > 64: 0 (26.0)
+|   |   |   |   |   lead_time > 84
+|   |   |   |   |   |   lead_time <= 162
+|   |   |   |   |   |   |   lead_time <= 161
+|   |   |   |   |   |   |   |   lead_time <= 158
+|   |   |   |   |   |   |   |   |   lead_time <= 156
+|   |   |   |   |   |   |   |   |   |   lead_time <= 150
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 138
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 88: 1 (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 88: 0 (48.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 138: 1 (36.0/8.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 150: 0 (11.0)
+|   |   |   |   |   |   |   |   |   lead_time > 156: 1 (17.0)
+|   |   |   |   |   |   |   |   lead_time > 158: 0 (8.0)
+|   |   |   |   |   |   |   lead_time > 161: 1 (15.0)
+|   |   |   |   |   |   lead_time > 162
+|   |   |   |   |   |   |   lead_time <= 212: 0 (51.0/2.0)
+|   |   |   |   |   |   |   lead_time > 212
+|   |   |   |   |   |   |   |   lead_time <= 215: 1 (12.0)
+|   |   |   |   |   |   |   |   lead_time > 215: 0 (7.0/1.0)
+|   |   |   |   lead_time > 230: 1 (15.0)
+|   |   |   lead_time > 242
+|   |   |   |   lead_time <= 287: 0 (58.0)
+|   |   |   |   lead_time > 287
+|   |   |   |   |   lead_time <= 378: 1 (15.0/1.0)
+|   |   |   |   |   lead_time > 378
+|   |   |   |   |   |   lead_time <= 434: 0 (37.0/1.0)
+|   |   |   |   |   |   lead_time > 434: 1 (6.0)
+|   |   agent = A2
+|   |   |   hotel = Resort Hotel: 0 (93.0/6.0)
+|   |   |   hotel = City Hotel
+|   |   |   |   lead_time <= 176
+|   |   |   |   |   lead_time <= 60: 0 (7.0)
+|   |   |   |   |   lead_time > 60
+|   |   |   |   |   |   adults <= 1: 0 (4.0)
+|   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   lead_time <= 168
+|   |   |   |   |   |   |   |   lead_time <= 114: 1 (2.0)
+|   |   |   |   |   |   |   |   lead_time > 114: 0 (2.0)
+|   |   |   |   |   |   |   lead_time > 168: 1 (29.0/8.0)
+|   |   |   |   lead_time > 176: 0 (10.0)
+|   |   agent = A127: 0 (10.0/2.0)
+|   |   agent = A95: 0 (96.0/16.0)
+|   |   agent = A146
+|   |   |   distribution_channel = Direct: 1 (3.0)
+|   |   |   distribution_channel = Corporate: 0 (3.0)
+|   |   |   distribution_channel = TA/TO: 0 (26.0/2.0)
+|   |   |   distribution_channel = Undefined: 0 (0.0)
+|   |   |   distribution_channel = GDS: 0 (0.0)
+|   |   agent = A9
+|   |   |   lead_time <= 224
+|   |   |   |   adults <= 1
+|   |   |   |   |   adults <= 0: 0 (134.0/46.0)
+|   |   |   |   |   adults > 0
+|   |   |   |   |   |   lead_time <= 25
+|   |   |   |   |   |   |   lead_time <= 18
+|   |   |   |   |   |   |   |   lead_time <= 16: 0 (73.0/32.0)
+|   |   |   |   |   |   |   |   lead_time > 16: 1 (65.0/28.0)
+|   |   |   |   |   |   |   lead_time > 18: 0 (245.0/82.0)
+|   |   |   |   |   |   lead_time > 25
+|   |   |   |   |   |   |   lead_time <= 73
+|   |   |   |   |   |   |   |   lead_time <= 40
+|   |   |   |   |   |   |   |   |   lead_time <= 26: 1 (29.0/7.0)
+|   |   |   |   |   |   |   |   |   lead_time > 26: 0 (356.0/163.0)
+|   |   |   |   |   |   |   |   lead_time > 40: 1 (417.0/165.0)
+|   |   |   |   |   |   |   lead_time > 73: 0 (732.0/330.0)
+|   |   |   |   adults > 1: 0 (21519.0/9460.0)
+|   |   |   lead_time > 224
+|   |   |   |   lead_time <= 259
+|   |   |   |   |   lead_time <= 250: 1 (689.0/287.0)
+|   |   |   |   |   lead_time > 250: 0 (224.0/106.0)
+|   |   |   |   lead_time > 259: 1 (1160.0/389.0)
+|   |   agent = A177
+|   |   |   lead_time <= 209: 0 (193.0/31.0)
+|   |   |   lead_time > 209
+|   |   |   |   lead_time <= 232
+|   |   |   |   |   hotel = Resort Hotel: 1 (35.0/3.0)
+|   |   |   |   |   hotel = City Hotel: 0 (17.0/3.0)
+|   |   |   |   lead_time > 232: 0 (21.0/2.0)
+|   |   agent = A6
+|   |   |   lead_time <= 243
+|   |   |   |   hotel = Resort Hotel: 0 (393.0/44.0)
+|   |   |   |   hotel = City Hotel
+|   |   |   |   |   adults <= 1
+|   |   |   |   |   |   lead_time <= 124
+|   |   |   |   |   |   |   lead_time <= 73
+|   |   |   |   |   |   |   |   lead_time <= 36
+|   |   |   |   |   |   |   |   |   lead_time <= 16: 1 (2.0)
+|   |   |   |   |   |   |   |   |   lead_time > 16
+|   |   |   |   |   |   |   |   |   |   lead_time <= 32: 0 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 32: 1 (2.0)
+|   |   |   |   |   |   |   |   lead_time > 36: 0 (32.0/1.0)
+|   |   |   |   |   |   |   lead_time > 73: 1 (67.0/31.0)
+|   |   |   |   |   |   lead_time > 124
+|   |   |   |   |   |   |   lead_time <= 230: 0 (43.0/1.0)
+|   |   |   |   |   |   |   lead_time > 230: 1 (4.0)
+|   |   |   |   |   adults > 1
+|   |   |   |   |   |   lead_time <= 208
+|   |   |   |   |   |   |   lead_time <= 102
+|   |   |   |   |   |   |   |   lead_time <= 73
+|   |   |   |   |   |   |   |   |   lead_time <= 40
+|   |   |   |   |   |   |   |   |   |   lead_time <= 37: 0 (34.0/8.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 37: 1 (127.0/54.0)
+|   |   |   |   |   |   |   |   |   lead_time > 40: 0 (95.0/20.0)
+|   |   |   |   |   |   |   |   lead_time > 73: 1 (318.0/139.0)
+|   |   |   |   |   |   |   lead_time > 102: 0 (118.0/19.0)
+|   |   |   |   |   |   lead_time > 208
+|   |   |   |   |   |   |   lead_time <= 215: 1 (51.0)
+|   |   |   |   |   |   |   lead_time > 215
+|   |   |   |   |   |   |   |   lead_time <= 220: 0 (16.0)
+|   |   |   |   |   |   |   |   lead_time > 220: 1 (28.0/7.0)
+|   |   |   lead_time > 243
+|   |   |   |   lead_time <= 287
+|   |   |   |   |   lead_time <= 277: 0 (375.0/23.0)
+|   |   |   |   |   lead_time > 277: 1 (56.0)
+|   |   |   |   lead_time > 287
+|   |   |   |   |   adults <= 1: 0 (171.0/4.0)
+|   |   |   |   |   adults > 1
+|   |   |   |   |   |   lead_time <= 294: 0 (57.0/2.0)
+|   |   |   |   |   |   lead_time > 294
+|   |   |   |   |   |   |   lead_time <= 350
+|   |   |   |   |   |   |   |   lead_time <= 347
+|   |   |   |   |   |   |   |   |   lead_time <= 299: 1 (15.0/6.0)
+|   |   |   |   |   |   |   |   |   lead_time > 299
+|   |   |   |   |   |   |   |   |   |   lead_time <= 307: 0 (53.0/6.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 307
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 316: 1 (17.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 316: 0 (130.0/17.0)
+|   |   |   |   |   |   |   |   lead_time > 347: 1 (17.0)
+|   |   |   |   |   |   |   lead_time > 350: 0 (406.0/57.0)
+|   |   agent = A143: 0 (167.0/13.0)
+|   |   agent = A244: 0 (4.0/1.0)
+|   |   agent = A149
+|   |   |   lead_time <= 90: 0 (17.0/1.0)
+|   |   |   lead_time > 90
+|   |   |   |   lead_time <= 119: 1 (4.0)
+|   |   |   |   lead_time > 119: 0 (3.0/1.0)
+|   |   agent = A167: 0 (0.0)
+|   |   agent = A300: 0 (1.0)
+|   |   agent = A171
+|   |   |   hotel = Resort Hotel: 0 (298.0/46.0)
+|   |   |   hotel = City Hotel
+|   |   |   |   lead_time <= 125
+|   |   |   |   |   lead_time <= 71
+|   |   |   |   |   |   adults <= 1: 0 (47.0/5.0)
+|   |   |   |   |   |   adults > 1: 1 (45.0/1.0)
+|   |   |   |   |   lead_time > 71: 0 (66.0)
+|   |   |   |   lead_time > 125
+|   |   |   |   |   lead_time <= 169: 1 (71.0)
+|   |   |   |   |   lead_time > 169
+|   |   |   |   |   |   lead_time <= 180: 0 (10.0/1.0)
+|   |   |   |   |   |   lead_time > 180: 1 (2.0)
+|   |   agent = A305
+|   |   |   lead_time <= 85: 0 (20.0/1.0)
+|   |   |   lead_time > 85: 1 (25.0)
+|   |   agent = A67
+|   |   |   lead_time <= 83: 0 (48.0/2.0)
+|   |   |   lead_time > 83
+|   |   |   |   lead_time <= 87: 1 (44.0)
+|   |   |   |   lead_time > 87: 0 (5.0/1.0)
+|   |   agent = A196: 0 (228.0/45.0)
+|   |   agent = A152: 0 (46.0)
+|   |   agent = A142: 0 (95.0/15.0)
+|   |   agent = A261: 0 (30.0/7.0)
+|   |   agent = A104: 0 (40.0/4.0)
+|   |   agent = A36: 0 (88.0/5.0)
+|   |   agent = A26
+|   |   |   lead_time <= 144: 0 (188.0/7.0)
+|   |   |   lead_time > 144
+|   |   |   |   lead_time <= 275
+|   |   |   |   |   hotel = Resort Hotel
+|   |   |   |   |   |   lead_time <= 269: 0 (27.0/4.0)
+|   |   |   |   |   |   lead_time > 269: 1 (2.0)
+|   |   |   |   |   hotel = City Hotel: 1 (87.0)
+|   |   |   |   lead_time > 275
+|   |   |   |   |   lead_time <= 297: 0 (32.0/3.0)
+|   |   |   |   |   lead_time > 297: 1 (3.0/1.0)
+|   |   agent = A29
+|   |   |   lead_time <= 133
+|   |   |   |   lead_time <= 69
+|   |   |   |   |   lead_time <= 54: 0 (7.0)
+|   |   |   |   |   lead_time > 54: 1 (69.0)
+|   |   |   |   lead_time > 69: 1 (138.0)
+|   |   |   lead_time > 133
+|   |   |   |   lead_time <= 160: 0 (81.0/4.0)
+|   |   |   |   lead_time > 160
+|   |   |   |   |   lead_time <= 225
+|   |   |   |   |   |   adults <= 2: 1 (70.0/20.0)
+|   |   |   |   |   |   adults > 2: 0 (6.0)
+|   |   |   |   |   lead_time > 225: 1 (101.0/1.0)
+|   |   agent = A258: 0 (3.0)
+|   |   agent = A110: 0 (0.0)
+|   |   agent = A71
+|   |   |   lead_time <= 98
+|   |   |   |   lead_time <= 66
+|   |   |   |   |   lead_time <= 26: 0 (7.0)
+|   |   |   |   |   lead_time > 26
+|   |   |   |   |   |   lead_time <= 41: 1 (2.0)
+|   |   |   |   |   |   lead_time > 41: 0 (4.0)
+|   |   |   |   lead_time > 66: 1 (35.0)
+|   |   |   lead_time > 98: 0 (22.0/2.0)
+|   |   agent = A181
+|   |   |   adults <= 1: 1 (2.0)
+|   |   |   adults > 1: 0 (40.0/13.0)
+|   |   agent = A88: 0 (0.0)
+|   |   agent = A251: 0 (213.0/19.0)
+|   |   agent = A275
+|   |   |   lead_time <= 124: 1 (2.0)
+|   |   |   lead_time > 124: 0 (5.0)
+|   |   agent = A69: 0 (85.0/3.0)
+|   |   agent = A248
+|   |   |   lead_time <= 308
+|   |   |   |   lead_time <= 221
+|   |   |   |   |   lead_time <= 155: 0 (12.0)
+|   |   |   |   |   lead_time > 155
+|   |   |   |   |   |   adults <= 1: 0 (4.0)
+|   |   |   |   |   |   adults > 1: 1 (41.0/6.0)
+|   |   |   |   lead_time > 221: 0 (24.0)
+|   |   |   lead_time > 308: 1 (18.0)
+|   |   agent = A208
+|   |   |   lead_time <= 196
+|   |   |   |   lead_time <= 122: 1 (13.0/5.0)
+|   |   |   |   lead_time > 122: 0 (21.0/4.0)
+|   |   |   lead_time > 196: 0 (56.0)
+|   |   agent = A256: 0 (19.0/1.0)
+|   |   agent = A314
+|   |   |   lead_time <= 167: 0 (470.0/79.0)
+|   |   |   lead_time > 167
+|   |   |   |   lead_time <= 172: 1 (33.0/11.0)
+|   |   |   |   lead_time > 172: 0 (214.0/49.0)
+|   |   agent = A126: 0 (1.0)
+|   |   agent = A281
+|   |   |   lead_time <= 43: 1 (45.0)
+|   |   |   lead_time > 43
+|   |   |   |   lead_time <= 69: 0 (21.0/2.0)
+|   |   |   |   lead_time > 69: 1 (6.0)
+|   |   agent = A273
+|   |   |   lead_time <= 217
+|   |   |   |   distribution_channel = Direct
+|   |   |   |   |   lead_time <= 200
+|   |   |   |   |   |   adults <= 1: 0 (12.0)
+|   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   lead_time <= 91
+|   |   |   |   |   |   |   |   lead_time <= 82: 1 (21.0/9.0)
+|   |   |   |   |   |   |   |   lead_time > 82: 0 (2.0)
+|   |   |   |   |   |   |   lead_time > 91
+|   |   |   |   |   |   |   |   lead_time <= 135: 1 (26.0)
+|   |   |   |   |   |   |   |   lead_time > 135: 0 (2.0)
+|   |   |   |   |   lead_time > 200: 1 (38.0)
+|   |   |   |   distribution_channel = Corporate: 1 (0.0)
+|   |   |   |   distribution_channel = TA/TO: 0 (45.0/10.0)
+|   |   |   |   distribution_channel = Undefined: 1 (0.0)
+|   |   |   |   distribution_channel = GDS: 1 (0.0)
+|   |   |   lead_time > 217: 0 (182.0/14.0)
+|   |   agent = A253
+|   |   |   lead_time <= 184
+|   |   |   |   lead_time <= 140: 0 (29.0/2.0)
+|   |   |   |   lead_time > 140
+|   |   |   |   |   lead_time <= 144: 1 (5.0/1.0)
+|   |   |   |   |   lead_time > 144: 0 (11.0)
+|   |   |   lead_time > 184
+|   |   |   |   lead_time <= 204: 1 (8.0)
+|   |   |   |   lead_time > 204: 0 (31.0/1.0)
+|   |   agent = A185
+|   |   |   lead_time <= 37: 0 (63.0/2.0)
+|   |   |   lead_time > 37
+|   |   |   |   adults <= 1: 1 (8.0/2.0)
+|   |   |   |   adults > 1: 0 (4.0/1.0)
+|   |   agent = A330: 0 (28.0/5.0)
+|   |   agent = A334: 0 (26.0)
+|   |   agent = A328: 0 (8.0)
+|   |   agent = A326
+|   |   |   hotel = Resort Hotel: 0 (5.0/1.0)
+|   |   |   hotel = City Hotel: 1 (160.0)
+|   |   agent = A321: 0 (2.0)
+|   |   agent = A324: 0 (9.0/1.0)
+|   |   agent = A313: 0 (34.0/1.0)
+|   |   agent = A38
+|   |   |   distribution_channel = Direct: 0 (25.0/3.0)
+|   |   |   distribution_channel = Corporate: 0 (30.0/6.0)
+|   |   |   distribution_channel = TA/TO
+|   |   |   |   lead_time <= 40: 0 (82.0/26.0)
+|   |   |   |   lead_time > 40: 1 (108.0/13.0)
+|   |   |   distribution_channel = Undefined: 1 (0.0)
+|   |   |   distribution_channel = GDS: 1 (0.0)
+|   |   agent = A155
+|   |   |   lead_time <= 225: 0 (56.0/23.0)
+|   |   |   lead_time > 225: 1 (29.0)
+|   |   agent = A68
+|   |   |   lead_time <= 307
+|   |   |   |   lead_time <= 182
+|   |   |   |   |   lead_time <= 70: 0 (30.0/13.0)
+|   |   |   |   |   lead_time > 70: 1 (94.0)
+|   |   |   |   lead_time > 182: 0 (23.0)
+|   |   |   lead_time > 307: 1 (28.0)
+|   |   agent = A335: 0 (1.0)
+|   |   agent = A308: 0 (54.0/2.0)
+|   |   agent = A332
+|   |   |   lead_time <= 102: 1 (31.0)
+|   |   |   lead_time > 102: 0 (19.0/9.0)
+|   |   agent = A94: 0 (16.0/5.0)
+|   |   agent = A348: 0 (6.0)
+|   |   agent = A310
+|   |   |   hotel = Resort Hotel: 1 (20.0)
+|   |   |   hotel = City Hotel: 0 (5.0)
+|   |   agent = A339
+|   |   |   lead_time <= 30
+|   |   |   |   lead_time <= 24: 0 (3.0)
+|   |   |   |   lead_time > 24: 1 (9.0/2.0)
+|   |   |   lead_time > 30: 0 (17.0/2.0)
+|   |   agent = A375
+|   |   |   lead_time <= 30: 0 (6.0)
+|   |   |   lead_time > 30
+|   |   |   |   lead_time <= 38: 1 (3.0)
+|   |   |   |   lead_time > 38: 0 (26.0/7.0)
+|   |   agent = A66
+|   |   |   lead_time <= 47
+|   |   |   |   lead_time <= 19: 0 (2.0)
+|   |   |   |   lead_time > 19: 1 (5.0)
+|   |   |   lead_time > 47
+|   |   |   |   adults <= 1
+|   |   |   |   |   lead_time <= 111: 0 (4.0/1.0)
+|   |   |   |   |   lead_time > 111: 1 (2.0)
+|   |   |   |   adults > 1: 0 (30.0)
+|   |   agent = A327: 0 (15.0/4.0)
+|   |   agent = A387: 0 (30.0/2.0)
+|   |   agent = A298
+|   |   |   lead_time <= 264: 0 (375.0/85.0)
+|   |   |   lead_time > 264
+|   |   |   |   lead_time <= 335: 1 (53.0/9.0)
+|   |   |   |   lead_time > 335: 0 (40.0/13.0)
+|   |   agent = A91: 0 (36.0/2.0)
+|   |   agent = A245
+|   |   |   lead_time <= 213: 1 (25.0)
+|   |   |   lead_time > 213: 0 (11.0)
+|   |   agent = A385: 0 (30.0/10.0)
+|   |   agent = A257: 1 (24.0)
+|   |   agent = A393: 0 (8.0)
+|   |   agent = A168
+|   |   |   adults <= 1
+|   |   |   |   lead_time <= 65: 0 (9.0/1.0)
+|   |   |   |   lead_time > 65: 1 (3.0)
+|   |   |   adults > 1: 0 (133.0/10.0)
+|   |   agent = A405: 0 (0.0)
+|   |   agent = A249: 0 (28.0/11.0)
+|   |   agent = A315: 0 (242.0/75.0)
+|   |   agent = A75: 0 (68.0/8.0)
+|   |   agent = A128: 0 (22.0/2.0)
+|   |   agent = A307
+|   |   |   lead_time <= 94: 0 (6.0)
+|   |   |   lead_time > 94: 1 (7.0)
+|   |   agent = A11
+|   |   |   hotel = Resort Hotel
+|   |   |   |   lead_time <= 180
+|   |   |   |   |   lead_time <= 20: 1 (2.0)
+|   |   |   |   |   lead_time > 20: 0 (20.0/4.0)
+|   |   |   |   lead_time > 180
+|   |   |   |   |   lead_time <= 183: 1 (16.0)
+|   |   |   |   |   lead_time > 183
+|   |   |   |   |   |   lead_time <= 194: 0 (4.0)
+|   |   |   |   |   |   lead_time > 194
+|   |   |   |   |   |   |   lead_time <= 316
+|   |   |   |   |   |   |   |   lead_time <= 232: 1 (39.0/3.0)
+|   |   |   |   |   |   |   |   lead_time > 232: 0 (6.0)
+|   |   |   |   |   |   |   lead_time > 316: 1 (16.0)
+|   |   |   hotel = City Hotel: 0 (256.0/28.0)
+|   |   agent = A436: 0 (45.0/4.0)
+|   |   agent = A1
+|   |   |   lead_time <= 272
+|   |   |   |   lead_time <= 85
+|   |   |   |   |   lead_time <= 35
+|   |   |   |   |   |   adults <= 1: 0 (140.0/5.0)
+|   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   adults <= 2
+|   |   |   |   |   |   |   |   lead_time <= 26
+|   |   |   |   |   |   |   |   |   lead_time <= 21: 0 (138.0/26.0)
+|   |   |   |   |   |   |   |   |   lead_time > 21
+|   |   |   |   |   |   |   |   |   |   lead_time <= 23: 1 (13.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 23: 0 (27.0/9.0)
+|   |   |   |   |   |   |   |   lead_time > 26: 1 (96.0/24.0)
+|   |   |   |   |   |   |   adults > 2: 0 (20.0/1.0)
+|   |   |   |   |   lead_time > 35
+|   |   |   |   |   |   lead_time <= 60: 0 (529.0/77.0)
+|   |   |   |   |   |   lead_time > 60
+|   |   |   |   |   |   |   lead_time <= 78
+|   |   |   |   |   |   |   |   lead_time <= 76
+|   |   |   |   |   |   |   |   |   lead_time <= 66
+|   |   |   |   |   |   |   |   |   |   lead_time <= 64
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 62
+|   |   |   |   |   |   |   |   |   |   |   |   adults <= 1: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   adults <= 2: 1 (26.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adults > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 62: 0 (12.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 64: 1 (47.0/1.0)
+|   |   |   |   |   |   |   |   |   lead_time > 66
+|   |   |   |   |   |   |   |   |   |   lead_time <= 70: 0 (62.0/9.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 70
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 73: 1 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 73: 0 (64.0/18.0)
+|   |   |   |   |   |   |   |   lead_time > 76: 1 (20.0)
+|   |   |   |   |   |   |   lead_time > 78: 0 (109.0/9.0)
+|   |   |   |   lead_time > 85
+|   |   |   |   |   lead_time <= 93: 1 (241.0/2.0)
+|   |   |   |   |   lead_time > 93
+|   |   |   |   |   |   hotel = Resort Hotel: 1 (50.0)
+|   |   |   |   |   |   hotel = City Hotel
+|   |   |   |   |   |   |   lead_time <= 129
+|   |   |   |   |   |   |   |   lead_time <= 98: 0 (52.0/5.0)
+|   |   |   |   |   |   |   |   lead_time > 98
+|   |   |   |   |   |   |   |   |   lead_time <= 125
+|   |   |   |   |   |   |   |   |   |   lead_time <= 113
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 103
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 101: 1 (41.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 101: 0 (21.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 103: 1 (77.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 113
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 122
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 118: 0 (40.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 118: 1 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 122: 0 (27.0/2.0)
+|   |   |   |   |   |   |   |   |   lead_time > 125: 1 (38.0)
+|   |   |   |   |   |   |   lead_time > 129
+|   |   |   |   |   |   |   |   lead_time <= 181
+|   |   |   |   |   |   |   |   |   lead_time <= 178
+|   |   |   |   |   |   |   |   |   |   lead_time <= 175
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 171
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 165
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 146: 0 (168.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lead_time > 146: 1 (35.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 165: 0 (51.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 171: 1 (19.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 175: 0 (10.0)
+|   |   |   |   |   |   |   |   |   lead_time > 178: 1 (20.0)
+|   |   |   |   |   |   |   |   lead_time > 181
+|   |   |   |   |   |   |   |   |   lead_time <= 247
+|   |   |   |   |   |   |   |   |   |   lead_time <= 216
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 199: 0 (141.0/48.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 199: 1 (26.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 216
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 234
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 233: 0 (94.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 233: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 234: 0 (42.0)
+|   |   |   |   |   |   |   |   |   lead_time > 247
+|   |   |   |   |   |   |   |   |   |   lead_time <= 259: 1 (35.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 259
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 269
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time <= 265: 0 (38.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   lead_time > 265: 1 (32.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 269: 0 (23.0)
+|   |   |   lead_time > 272
+|   |   |   |   lead_time <= 329
+|   |   |   |   |   lead_time <= 281: 1 (103.0/4.0)
+|   |   |   |   |   lead_time > 281
+|   |   |   |   |   |   lead_time <= 325
+|   |   |   |   |   |   |   lead_time <= 282: 0 (19.0/3.0)
+|   |   |   |   |   |   |   lead_time > 282
+|   |   |   |   |   |   |   |   lead_time <= 315
+|   |   |   |   |   |   |   |   |   lead_time <= 312
+|   |   |   |   |   |   |   |   |   |   lead_time <= 298
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 296: 1 (147.0/19.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 296: 0 (20.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 298: 1 (84.0)
+|   |   |   |   |   |   |   |   |   lead_time > 312: 0 (25.0/10.0)
+|   |   |   |   |   |   |   |   lead_time > 315: 1 (64.0)
+|   |   |   |   |   |   lead_time > 325: 0 (24.0)
+|   |   |   |   lead_time > 329
+|   |   |   |   |   lead_time <= 429
+|   |   |   |   |   |   lead_time <= 420: 1 (547.0)
+|   |   |   |   |   |   lead_time > 420
+|   |   |   |   |   |   |   lead_time <= 426: 1 (47.0/6.0)
+|   |   |   |   |   |   |   lead_time > 426: 0 (15.0/1.0)
+|   |   |   |   |   lead_time > 429: 1 (763.0)
+|   |   agent = A201: 0 (41.0)
+|   |   agent = A183: 0 (30.0)
+|   |   agent = A223: 0 (1.0)
+|   |   agent = A368
+|   |   |   lead_time <= 180: 0 (16.0/1.0)
+|   |   |   lead_time > 180: 1 (20.0/8.0)
+|   |   agent = A336: 0 (13.0/2.0)
+|   |   agent = A291: 0 (0.0)
+|   |   agent = A464: 0 (90.0/1.0)
+|   |   agent = A411: 0 (16.0/1.0)
+|   |   agent = A481: 0 (8.0/1.0)
+|   |   agent = A10
+|   |   |   lead_time <= 170: 0 (110.0/15.0)
+|   |   |   lead_time > 170
+|   |   |   |   lead_time <= 236: 1 (20.0/3.0)
+|   |   |   |   lead_time > 236
+|   |   |   |   |   lead_time <= 246: 0 (2.0)
+|   |   |   |   |   lead_time > 246
+|   |   |   |   |   |   lead_time <= 254: 1 (2.0)
+|   |   |   |   |   |   lead_time > 254: 0 (2.0)
+|   |   agent = A154
+|   |   |   lead_time <= 122
+|   |   |   |   lead_time <= 30: 1 (6.0)
+|   |   |   |   lead_time > 30
+|   |   |   |   |   lead_time <= 72: 0 (44.0/7.0)
+|   |   |   |   |   lead_time > 72
+|   |   |   |   |   |   lead_time <= 90: 1 (20.0)
+|   |   |   |   |   |   lead_time > 90: 0 (20.0/4.0)
+|   |   |   lead_time > 122: 1 (48.0)
+|   |   agent = A468
+|   |   |   adults <= 1: 0 (2.0)
+|   |   |   adults > 1
+|   |   |   |   lead_time <= 159: 0 (21.0/5.0)
+|   |   |   |   lead_time > 159: 1 (3.0)
+|   |   agent = A410
+|   |   |   lead_time <= 144: 1 (53.0/23.0)
+|   |   |   lead_time > 144
+|   |   |   |   adults <= 1: 1 (6.0/2.0)
+|   |   |   |   adults > 1: 0 (72.0/11.0)
+|   |   agent = A390
+|   |   |   lead_time <= 111: 1 (7.0)
+|   |   |   lead_time > 111
+|   |   |   |   adults <= 1: 1 (3.0/1.0)
+|   |   |   |   adults > 1: 0 (46.0/2.0)
+|   |   agent = A440
+|   |   |   lead_time <= 114
+|   |   |   |   lead_time <= 56: 1 (2.0)
+|   |   |   |   lead_time > 56: 0 (13.0/3.0)
+|   |   |   lead_time > 114
+|   |   |   |   lead_time <= 145: 1 (15.0)
+|   |   |   |   lead_time > 145
+|   |   |   |   |   lead_time <= 163: 0 (4.0)
+|   |   |   |   |   lead_time > 163: 1 (22.0/4.0)
+|   |   agent = A495
+|   |   |   hotel = Resort Hotel: 1 (50.0)
+|   |   |   hotel = City Hotel: 0 (7.0)
+|   |   agent = A492: 1 (28.0)
+|   |   agent = A493: 0 (35.0/5.0)
+|   |   agent = A434: 0 (33.0/2.0)
+|   |   agent = A57
+|   |   |   hotel = Resort Hotel
+|   |   |   |   lead_time <= 293: 0 (15.0)
+|   |   |   |   lead_time > 293: 1 (3.0/1.0)
+|   |   |   hotel = City Hotel: 1 (7.0)
+|   |   agent = A531
+|   |   |   distribution_channel = Direct: 1 (0.0)
+|   |   |   distribution_channel = Corporate: 1 (45.0)
+|   |   |   distribution_channel = TA/TO: 0 (22.0/1.0)
+|   |   |   distribution_channel = Undefined: 1 (0.0)
+|   |   |   distribution_channel = GDS: 1 (0.0)
+|   |   agent = A420: 0 (2.0)
+|   |   agent = A483: 1 (1.0)
+|   |   agent = A526: 0 (6.0/1.0)
+|   |   agent = A472: 1 (1.0)
+|   |   agent = A429: 0 (5.0/1.0)
+|   |   agent = A16: 0 (227.0/16.0)
+|   |   agent = A446: 0 (0.0)
+|   |   agent = A34
+|   |   |   lead_time <= 183: 1 (118.0/1.0)
+|   |   |   lead_time > 183
+|   |   |   |   lead_time <= 198: 0 (106.0/1.0)
+|   |   |   |   lead_time > 198: 1 (20.0)
+|   |   agent = A78: 0 (0.0)
+|   |   agent = A139: 0 (0.0)
+|   |   agent = A252: 0 (3.0)
+|   |   agent = A270: 0 (2.0/1.0)
+|   |   agent = A47: 0 (0.0)
+|   |   agent = A114: 0 (1.0)
+|   |   agent = A301: 0 (1.0)
+|   |   agent = A193: 0 (14.0)
+|   |   agent = A182: 1 (7.0/1.0)
+|   |   agent = A135: 0 (0.0)
+|   |   agent = A350: 0 (0.0)
+|   |   agent = A195: 0 (80.0/24.0)
+|   |   agent = A352: 0 (0.0)
+|   |   agent = A355: 1 (3.0/1.0)
+|   |   agent = A159
+|   |   |   lead_time <= 21
+|   |   |   |   lead_time <= 17: 0 (2.0)
+|   |   |   |   lead_time > 17: 1 (4.0)
+|   |   |   lead_time > 21: 0 (53.0/4.0)
+|   |   agent = A363: 0 (5.0)
+|   |   agent = A384: 0 (0.0)
+|   |   agent = A360: 0 (11.0)
+|   |   agent = A331: 0 (0.0)
+|   |   agent = A367: 0 (1.0)
+|   |   agent = A64: 1 (22.0)
+|   |   agent = A406: 0 (0.0)
+|   |   agent = A163: 0 (7.0)
+|   |   agent = A414: 0 (0.0)
+|   |   agent = A333: 0 (1.0)
+|   |   agent = A427: 0 (0.0)
+|   |   agent = A431: 0 (0.0)
+|   |   agent = A430: 0 (4.0)
+|   |   agent = A426: 0 (3.0)
+|   |   agent = A438: 0 (0.0)
+|   |   agent = A433: 0 (1.0)
+|   |   agent = A418: 0 (8.0)
+|   |   agent = A441: 0 (0.0)
+|   |   agent = A282: 0 (0.0)
+|   |   agent = A432: 0 (1.0)
+|   |   agent = A72: 0 (0.0)
+|   |   agent = A450: 0 (0.0)
+|   |   agent = A180: 0 (0.0)
+|   |   agent = A454: 0 (2.0)
+|   |   agent = A455: 0 (15.0)
+|   |   agent = A59: 0 (0.0)
+|   |   agent = A451: 0 (0.0)
+|   |   agent = A254: 0 (20.0/2.0)
+|   |   agent = A358: 0 (0.0)
+|   |   agent = A469: 0 (1.0)
+|   |   agent = A165: 0 (0.0)
+|   |   agent = A467: 0 (27.0)
+|   |   agent = A510: 0 (0.0)
+|   |   agent = A337: 0 (0.0)
+|   |   agent = A476: 0 (2.0)
+|   |   agent = A502: 0 (24.0)
+|   |   agent = A527: 0 (34.0)
+|   |   agent = A479: 0 (30.0)
+|   |   agent = A508: 0 (5.0)
+|   |   agent = A535: 0 (0.0)
+|   |   agent = A302: 0 (0.0)
+|   |   agent = A497: 0 (1.0)
+|   |   agent = A187: 0 (21.0/2.0)
+|   |   agent = A13
+|   |   |   adults <= 2: 0 (38.0/12.0)
+|   |   |   adults > 2: 1 (5.0/1.0)
+|   |   agent = A7: 0 (2706.0/392.0)
+|   |   agent = A27: 0 (395.0/41.0)
+|   |   agent = A14: 0 (2579.0/513.0)
+|   |   agent = A22: 0 (348.0/41.0)
+|   |   agent = A17
+|   |   |   adults <= 1: 0 (17.0/1.0)
+|   |   |   adults > 1
+|   |   |   |   lead_time <= 141
+|   |   |   |   |   lead_time <= 99: 0 (30.0/11.0)
+|   |   |   |   |   lead_time > 99: 1 (137.0/43.0)
+|   |   |   |   lead_time > 141: 0 (21.0/3.0)
+|   |   agent = A28
+|   |   |   lead_time <= 109: 0 (1086.0/44.0)
+|   |   |   lead_time > 109
+|   |   |   |   lead_time <= 132
+|   |   |   |   |   lead_time <= 131: 0 (91.0/12.0)
+|   |   |   |   |   lead_time > 131: 1 (18.0/1.0)
+|   |   |   |   lead_time > 132: 0 (172.0/18.0)
+|   |   agent = A42: 0 (184.0/21.0)
+|   |   agent = A20
+|   |   |   lead_time <= 71
+|   |   |   |   lead_time <= 58
+|   |   |   |   |   lead_time <= 23
+|   |   |   |   |   |   lead_time <= 18: 0 (13.0)
+|   |   |   |   |   |   lead_time > 18: 1 (4.0)
+|   |   |   |   |   lead_time > 23: 0 (44.0)
+|   |   |   |   lead_time > 58: 0 (71.0/13.0)
+|   |   |   lead_time > 71
+|   |   |   |   lead_time <= 215
+|   |   |   |   |   adults <= 1: 0 (7.0)
+|   |   |   |   |   adults > 1
+|   |   |   |   |   |   lead_time <= 89: 1 (42.0)
+|   |   |   |   |   |   lead_time > 89
+|   |   |   |   |   |   |   lead_time <= 119: 0 (10.0)
+|   |   |   |   |   |   |   lead_time > 119: 1 (73.0/10.0)
+|   |   |   |   lead_time > 215: 1 (162.0)
+|   |   agent = A19
+|   |   |   adults <= 1
+|   |   |   |   lead_time <= 228: 0 (307.0/43.0)
+|   |   |   |   lead_time > 228: 1 (53.0)
+|   |   |   adults > 1: 1 (335.0/2.0)
+|   |   agent = A45: 0 (0.0)
+|   |   agent = A37
+|   |   |   lead_time <= 153
+|   |   |   |   lead_time <= 78
+|   |   |   |   |   lead_time <= 61
+|   |   |   |   |   |   adults <= 1: 0 (14.0/3.0)
+|   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   lead_time <= 39
+|   |   |   |   |   |   |   |   lead_time <= 35: 1 (3.0)
+|   |   |   |   |   |   |   |   lead_time > 35: 0 (4.0/1.0)
+|   |   |   |   |   |   |   lead_time > 39: 1 (25.0/1.0)
+|   |   |   |   |   lead_time > 61: 0 (152.0)
+|   |   |   |   lead_time > 78
+|   |   |   |   |   lead_time <= 146
+|   |   |   |   |   |   lead_time <= 139
+|   |   |   |   |   |   |   lead_time <= 128
+|   |   |   |   |   |   |   |   lead_time <= 114
+|   |   |   |   |   |   |   |   |   lead_time <= 106
+|   |   |   |   |   |   |   |   |   |   lead_time <= 102
+|   |   |   |   |   |   |   |   |   |   |   lead_time <= 90: 1 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   lead_time > 90: 0 (150.0/50.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 102: 1 (24.0)
+|   |   |   |   |   |   |   |   |   lead_time > 106: 0 (44.0)
+|   |   |   |   |   |   |   |   lead_time > 114
+|   |   |   |   |   |   |   |   |   lead_time <= 119
+|   |   |   |   |   |   |   |   |   |   lead_time <= 118: 1 (10.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 118: 0 (9.0)
+|   |   |   |   |   |   |   |   |   lead_time > 119: 1 (12.0)
+|   |   |   |   |   |   |   lead_time > 128: 0 (39.0)
+|   |   |   |   |   |   lead_time > 139: 1 (37.0)
+|   |   |   |   |   lead_time > 146: 0 (39.0)
+|   |   |   lead_time > 153
+|   |   |   |   lead_time <= 255
+|   |   |   |   |   lead_time <= 165
+|   |   |   |   |   |   lead_time <= 157: 1 (99.0)
+|   |   |   |   |   |   lead_time > 157
+|   |   |   |   |   |   |   adults <= 1: 1 (107.0/6.0)
+|   |   |   |   |   |   |   adults > 1: 0 (32.0)
+|   |   |   |   |   lead_time > 165: 1 (157.0)
+|   |   |   |   lead_time > 255
+|   |   |   |   |   lead_time <= 264: 0 (23.0/2.0)
+|   |   |   |   |   lead_time > 264: 1 (18.0/1.0)
+|   |   agent = A61: 0 (2.0)
+|   |   agent = A39
+|   |   |   lead_time <= 205
+|   |   |   |   adults <= 1: 0 (41.0)
+|   |   |   |   adults > 1
+|   |   |   |   |   lead_time <= 37
+|   |   |   |   |   |   lead_time <= 34
+|   |   |   |   |   |   |   lead_time <= 31
+|   |   |   |   |   |   |   |   lead_time <= 26: 0 (2.0)
+|   |   |   |   |   |   |   |   lead_time > 26: 1 (4.0/1.0)
+|   |   |   |   |   |   |   lead_time > 31: 0 (8.0)
+|   |   |   |   |   |   lead_time > 34: 1 (11.0/3.0)
+|   |   |   |   |   lead_time > 37: 0 (21.0/1.0)
+|   |   |   lead_time > 205: 1 (20.0)
+|   |   agent = A21
+|   |   |   adults <= 1: 0 (96.0/3.0)
+|   |   |   adults > 1
+|   |   |   |   lead_time <= 99: 0 (108.0/40.0)
+|   |   |   |   lead_time > 99
+|   |   |   |   |   lead_time <= 318
+|   |   |   |   |   |   lead_time <= 303
+|   |   |   |   |   |   |   lead_time <= 276
+|   |   |   |   |   |   |   |   lead_time <= 151
+|   |   |   |   |   |   |   |   |   lead_time <= 147
+|   |   |   |   |   |   |   |   |   |   lead_time <= 122: 1 (18.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 122: 0 (15.0/3.0)
+|   |   |   |   |   |   |   |   |   lead_time > 147: 1 (45.0)
+|   |   |   |   |   |   |   |   lead_time > 151
+|   |   |   |   |   |   |   |   |   lead_time <= 265: 0 (32.0/5.0)
+|   |   |   |   |   |   |   |   |   lead_time > 265: 1 (123.0/24.0)
+|   |   |   |   |   |   |   lead_time > 276
+|   |   |   |   |   |   |   |   lead_time <= 296: 0 (43.0/5.0)
+|   |   |   |   |   |   |   |   lead_time > 296: 1 (15.0/4.0)
+|   |   |   |   |   |   lead_time > 303
+|   |   |   |   |   |   |   lead_time <= 307: 1 (170.0)
+|   |   |   |   |   |   |   lead_time > 307
+|   |   |   |   |   |   |   |   lead_time <= 312: 0 (9.0/2.0)
+|   |   |   |   |   |   |   |   lead_time > 312: 1 (20.0)
+|   |   |   |   |   lead_time > 318
+|   |   |   |   |   |   lead_time <= 391: 0 (58.0/5.0)
+|   |   |   |   |   |   lead_time > 391: 1 (25.0)
+|   |   agent = A24: 0 (21.0)
+|   |   agent = A41: 1 (25.0)
+|   |   agent = A50: 0 (12.0)
+|   |   agent = A30
+|   |   |   lead_time <= 275
+|   |   |   |   lead_time <= 91
+|   |   |   |   |   lead_time <= 40
+|   |   |   |   |   |   lead_time <= 16: 0 (7.0)
+|   |   |   |   |   |   lead_time > 16: 1 (31.0/14.0)
+|   |   |   |   |   lead_time > 40: 0 (22.0/3.0)
+|   |   |   |   lead_time > 91
+|   |   |   |   |   lead_time <= 131: 1 (21.0)
+|   |   |   |   |   lead_time > 131
+|   |   |   |   |   |   lead_time <= 167
+|   |   |   |   |   |   |   lead_time <= 134: 0 (124.0/58.0)
+|   |   |   |   |   |   |   lead_time > 134: 1 (38.0)
+|   |   |   |   |   |   lead_time > 167
+|   |   |   |   |   |   |   lead_time <= 236: 0 (26.0/2.0)
+|   |   |   |   |   |   |   lead_time > 236: 1 (50.0/20.0)
+|   |   |   lead_time > 275: 0 (155.0/14.0)
+|   |   agent = A54: 0 (1.0)
+|   |   agent = A52
+|   |   |   lead_time <= 26
+|   |   |   |   lead_time <= 20: 0 (3.0)
+|   |   |   |   lead_time > 20: 1 (9.0)
+|   |   |   lead_time > 26
+|   |   |   |   lead_time <= 171: 0 (112.0/22.0)
+|   |   |   |   lead_time > 171: 1 (8.0/2.0)
+|   |   agent = A12
+|   |   |   lead_time <= 88: 0 (126.0/6.0)
+|   |   |   lead_time > 88
+|   |   |   |   lead_time <= 113: 1 (67.0)
+|   |   |   |   lead_time > 113
+|   |   |   |   |   adults <= 1: 0 (40.0/8.0)
+|   |   |   |   |   adults > 1
+|   |   |   |   |   |   lead_time <= 155: 0 (21.0/2.0)
+|   |   |   |   |   |   lead_time > 155
+|   |   |   |   |   |   |   lead_time <= 201: 1 (82.0)
+|   |   |   |   |   |   |   lead_time > 201
+|   |   |   |   |   |   |   |   lead_time <= 245
+|   |   |   |   |   |   |   |   |   lead_time <= 227: 0 (49.0/16.0)
+|   |   |   |   |   |   |   |   |   lead_time > 227: 1 (52.0)
+|   |   |   |   |   |   |   |   lead_time > 245
+|   |   |   |   |   |   |   |   |   lead_time <= 273: 0 (36.0/5.0)
+|   |   |   |   |   |   |   |   |   lead_time > 273
+|   |   |   |   |   |   |   |   |   |   lead_time <= 320: 1 (55.0/5.0)
+|   |   |   |   |   |   |   |   |   |   lead_time > 320: 0 (22.0/9.0)
+|   |   agent = A44
+|   |   |   lead_time <= 252
+|   |   |   |   lead_time <= 50: 1 (56.0/1.0)
+|   |   |   |   lead_time > 50
+|   |   |   |   |   adults <= 1
+|   |   |   |   |   |   lead_time <= 174: 0 (7.0)
+|   |   |   |   |   |   lead_time > 174
+|   |   |   |   |   |   |   lead_time <= 179: 1 (59.0)
+|   |   |   |   |   |   |   lead_time > 179: 0 (5.0/1.0)
+|   |   |   |   |   adults > 1
+|   |   |   |   |   |   lead_time <= 109: 0 (22.0)
+|   |   |   |   |   |   lead_time > 109
+|   |   |   |   |   |   |   lead_time <= 173: 1 (5.0)
+|   |   |   |   |   |   |   lead_time > 173: 0 (36.0/10.0)
+|   |   |   lead_time > 252: 1 (50.0)
+|   |   agent = A31
+|   |   |   lead_time <= 104
+|   |   |   |   lead_time <= 91: 0 (7.0)
+|   |   |   |   lead_time > 91: 1 (9.0)
+|   |   |   lead_time > 104: 1 (145.0)
+|   |   agent = A83: 0 (526.0/158.0)
+|   |   agent = A32: 0 (14.0/1.0)
+|   |   agent = A63: 0 (23.0)
+|   |   agent = A60: 1 (19.0)
+|   |   agent = A55: 1 (16.0)
+|   |   agent = A56
+|   |   |   lead_time <= 53: 1 (183.0/1.0)
+|   |   |   lead_time > 53
+|   |   |   |   lead_time <= 67: 0 (70.0/6.0)
+|   |   |   |   lead_time > 67
+|   |   |   |   |   lead_time <= 208
+|   |   |   |   |   |   lead_time <= 126
+|   |   |   |   |   |   |   lead_time <= 109: 1 (37.0/1.0)
+|   |   |   |   |   |   |   lead_time > 109: 0 (17.0/1.0)
+|   |   |   |   |   |   lead_time > 126: 1 (28.0)
+|   |   |   |   |   lead_time > 208
+|   |   |   |   |   |   lead_time <= 300
+|   |   |   |   |   |   |   lead_time <= 252: 0 (4.0)
+|   |   |   |   |   |   |   lead_time > 252: 1 (2.0)
+|   |   |   |   |   |   lead_time > 300: 0 (30.0/1.0)
+|   |   agent = A89: 0 (63.0/3.0)
+|   |   agent = A87
+|   |   |   adults <= 1: 0 (30.0/5.0)
+|   |   |   adults > 1: 1 (21.0/5.0)
+|   |   agent = A118
+|   |   |   adults <= 2: 0 (42.0/15.0)
+|   |   |   adults > 2: 1 (10.0/3.0)
+|   |   agent = A86
+|   |   |   lead_time <= 173
+|   |   |   |   adults <= 1
+|   |   |   |   |   lead_time <= 38
+|   |   |   |   |   |   lead_time <= 23: 1 (4.0)
+|   |   |   |   |   |   lead_time > 23
+|   |   |   |   |   |   |   lead_time <= 33: 0 (4.0)
+|   |   |   |   |   |   |   lead_time > 33: 1 (5.0/1.0)
+|   |   |   |   |   lead_time > 38: 0 (39.0/3.0)
+|   |   |   |   adults > 1
+|   |   |   |   |   lead_time <= 57
+|   |   |   |   |   |   lead_time <= 40
+|   |   |   |   |   |   |   lead_time <= 19: 0 (4.0)
+|   |   |   |   |   |   |   lead_time > 19
+|   |   |   |   |   |   |   |   lead_time <= 22: 1 (5.0)
+|   |   |   |   |   |   |   |   lead_time > 22: 0 (22.0/10.0)
+|   |   |   |   |   |   lead_time > 40: 1 (88.0/5.0)
+|   |   |   |   |   lead_time > 57: 0 (38.0/16.0)
+|   |   |   lead_time > 173
+|   |   |   |   lead_time <= 188: 1 (46.0)
+|   |   |   |   lead_time > 188: 0 (5.0/2.0)
+|   |   agent = A85: 0 (453.0/100.0)
+|   |   agent = A210: 0 (3.0)
+|   |   agent = A214: 0 (2.0)
+|   |   agent = A129: 0 (14.0/1.0)
+|   |   agent = A179: 0 (0.0)
+|   |   agent = A138
+|   |   |   lead_time <= 99: 0 (162.0/16.0)
+|   |   |   lead_time > 99
+|   |   |   |   lead_time <= 120: 1 (19.0/7.0)
+|   |   |   |   lead_time > 120: 0 (40.0/6.0)
+|   |   agent = A174: 0 (12.0/3.0)
+|   |   agent = A170: 1 (93.0)
+|   |   agent = A153: 1 (3.0)
+|   |   agent = A93: 0 (0.0)
+|   |   agent = A151
+|   |   |   lead_time <= 132: 0 (30.0/8.0)
+|   |   |   lead_time > 132: 1 (21.0)
+|   |   agent = A119
+|   |   |   lead_time <= 71: 0 (68.0)
+|   |   |   lead_time > 71
+|   |   |   |   adults <= 1: 1 (161.0/1.0)
+|   |   |   |   adults > 1
+|   |   |   |   |   lead_time <= 158: 0 (34.0/12.0)
+|   |   |   |   |   lead_time > 158: 1 (24.0)
+|   |   agent = A35
+|   |   |   lead_time <= 260: 0 (54.0/10.0)
+|   |   |   lead_time > 260: 1 (30.0)
+|   |   agent = A173: 0 (29.0/3.0)
+|   |   agent = A58
+|   |   |   lead_time <= 238: 1 (194.0/2.0)
+|   |   |   lead_time > 238
+|   |   |   |   lead_time <= 250: 0 (19.0/7.0)
+|   |   |   |   lead_time > 250
+|   |   |   |   |   lead_time <= 310: 1 (22.0)
+|   |   |   |   |   lead_time > 310
+|   |   |   |   |   |   adults <= 1: 1 (15.0/4.0)
+|   |   |   |   |   |   adults > 1: 0 (15.0/6.0)
+|   |   agent = A53: 1 (14.0)
+|   |   agent = A133: 0 (22.0/4.0)
+|   |   agent = A79
+|   |   |   lead_time <= 204: 0 (33.0/2.0)
+|   |   |   lead_time > 204
+|   |   |   |   lead_time <= 227: 1 (2.0)
+|   |   |   |   lead_time > 227: 0 (6.0/2.0)
+|   |   agent = A235: 1 (29.0)
+|   |   agent = A192
+|   |   |   lead_time <= 112: 0 (11.0/4.0)
+|   |   |   lead_time > 112: 1 (30.0)
+|   |   agent = A191
+|   |   |   lead_time <= 86: 1 (97.0)
+|   |   |   lead_time > 86
+|   |   |   |   lead_time <= 120: 0 (88.0)
+|   |   |   |   lead_time > 120: 1 (7.0/1.0)
+|   |   agent = A236: 1 (247.0)
+|   |   agent = A162: 1 (37.0)
+|   |   agent = A215: 0 (15.0/1.0)
+|   |   agent = A157
+|   |   |   lead_time <= 107
+|   |   |   |   lead_time <= 55
+|   |   |   |   |   lead_time <= 48
+|   |   |   |   |   |   lead_time <= 28
+|   |   |   |   |   |   |   lead_time <= 25: 0 (6.0/1.0)
+|   |   |   |   |   |   |   lead_time > 25: 1 (2.0)
+|   |   |   |   |   |   lead_time > 28: 0 (13.0)
+|   |   |   |   |   lead_time > 48: 1 (3.0)
+|   |   |   |   lead_time > 55: 0 (13.0)
+|   |   |   lead_time > 107: 1 (2.0)
+|   |   agent = A287: 1 (8.0)
+|   |   agent = A132
+|   |   |   lead_time <= 93
+|   |   |   |   lead_time <= 46
+|   |   |   |   |   adults <= 1: 1 (3.0/1.0)
+|   |   |   |   |   adults > 1: 0 (6.0)
+|   |   |   |   lead_time > 46
+|   |   |   |   |   lead_time <= 61: 1 (18.0)
+|   |   |   |   |   lead_time > 61
+|   |   |   |   |   |   lead_time <= 71: 0 (6.0)
+|   |   |   |   |   |   lead_time > 71
+|   |   |   |   |   |   |   lead_time <= 76: 1 (9.0)
+|   |   |   |   |   |   |   lead_time > 76
+|   |   |   |   |   |   |   |   lead_time <= 86: 0 (6.0)
+|   |   |   |   |   |   |   |   lead_time > 86: 1 (6.0)
+|   |   |   lead_time > 93: 0 (83.0/9.0)
+|   |   agent = A234
+|   |   |   lead_time <= 111: 1 (53.0/7.0)
+|   |   |   lead_time > 111
+|   |   |   |   adults <= 1: 0 (67.0/2.0)
+|   |   |   |   adults > 1
+|   |   |   |   |   lead_time <= 180: 0 (2.0)
+|   |   |   |   |   lead_time > 180: 1 (3.0)
+|   |   agent = A98
+|   |   |   lead_time <= 226: 0 (59.0/5.0)
+|   |   |   lead_time > 226: 1 (50.0)
+|   |   agent = A77: 0 (15.0/1.0)
+|   |   agent = A103: 0 (2.0/1.0)
+|   |   agent = A107: 1 (2.0)
+|   |   agent = A262: 0 (20.0/8.0)
+|   |   agent = A220: 0 (71.0/1.0)
+|   |   agent = A121: 0 (35.0/3.0)
+|   |   agent = A205
+|   |   |   lead_time <= 57
+|   |   |   |   lead_time <= 34: 1 (3.0)
+|   |   |   |   lead_time > 34: 0 (3.0/1.0)
+|   |   |   lead_time > 57: 0 (21.0)
+|   |   agent = A378
+|   |   |   lead_time <= 27: 0 (9.0)
+|   |   |   lead_time > 27: 1 (27.0)
+|   |   agent = A23: 0 (23.0/2.0)
+|   |   agent = A296
+|   |   |   lead_time <= 184: 1 (20.0/3.0)
+|   |   |   lead_time > 184: 0 (22.0/7.0)
+|   |   agent = A290: 0 (5.0/1.0)
+|   |   agent = A229
+|   |   |   lead_time <= 422
+|   |   |   |   lead_time <= 409
+|   |   |   |   |   lead_time <= 408
+|   |   |   |   |   |   adults <= 1: 0 (15.0/5.0)
+|   |   |   |   |   |   adults > 1
+|   |   |   |   |   |   |   lead_time <= 395
+|   |   |   |   |   |   |   |   lead_time <= 394: 1 (212.0/30.0)
+|   |   |   |   |   |   |   |   lead_time > 394: 0 (22.0/4.0)
+|   |   |   |   |   |   |   lead_time > 395: 1 (47.0/1.0)
+|   |   |   |   |   lead_time > 408: 0 (25.0/4.0)
+|   |   |   |   lead_time > 409: 1 (49.0/2.0)
+|   |   |   lead_time > 422
+|   |   |   |   lead_time <= 463
+|   |   |   |   |   lead_time <= 448
+|   |   |   |   |   |   lead_time <= 440
+|   |   |   |   |   |   |   lead_time <= 435: 0 (60.0/19.0)
+|   |   |   |   |   |   |   lead_time > 435: 1 (10.0)
+|   |   |   |   |   |   lead_time > 440: 0 (26.0/5.0)
+|   |   |   |   |   lead_time > 448
+|   |   |   |   |   |   lead_time <= 450: 1 (10.0)
+|   |   |   |   |   |   lead_time > 450: 0 (63.0/21.0)
+|   |   |   |   lead_time > 463
+|   |   |   |   |   lead_time <= 496: 1 (172.0/70.0)
+|   |   |   |   |   lead_time > 496
+|   |   |   |   |   |   lead_time <= 518
+|   |   |   |   |   |   |   lead_time <= 510
+|   |   |   |   |   |   |   |   lead_time <= 504: 0 (26.0/5.0)
+|   |   |   |   |   |   |   |   lead_time > 504: 1 (10.0)
+|   |   |   |   |   |   |   lead_time > 510: 0 (26.0/4.0)
+|   |   |   |   |   |   lead_time > 518: 1 (10.0)
+|   |   agent = A33: 1 (25.0)
+|   |   agent = A286: 1 (45.0)
+|   |   agent = A276: 1 (8.0)
+|   |   agent = A425: 0 (12.0/3.0)
+|   |   agent = A484: 0 (11.0/1.0)
+|   |   agent = A323: 1 (25.0)
+|   |   agent = A403: 1 (4.0)
+|   |   agent = A219: 0 (0.0)
+|   |   agent = A394: 0 (31.0/2.0)
+|   |   agent = A509: 0 (0.0)
+|   |   agent = A111: 0 (6.0)
+|   |   agent = A423: 0 (17.0/1.0)
+|   |   agent = A4: 0 (16.0)
+|   |   agent = A70: 0 (0.0)
+|   |   agent = A82: 0 (34.0)
+|   |   agent = A81: 0 (0.0)
+|   |   agent = A74: 0 (0.0)
+|   |   agent = A92: 0 (0.0)
+|   |   agent = A99: 0 (0.0)
+|   |   agent = A90: 0 (1.0)
+|   |   agent = A112: 0 (0.0)
+|   |   agent = A117: 0 (0.0)
+|   |   agent = A106: 0 (2.0)
+|   |   agent = A148: 0 (0.0)
+|   |   agent = A158: 0 (0.0)
+|   |   agent = A144: 0 (0.0)
+|   |   agent = A211: 0 (0.0)
+|   |   agent = A213: 0 (1.0)
+|   |   agent = A216: 0 (1.0)
+|   |   agent = A232: 0 (2.0)
+|   |   agent = A150: 0 (0.0)
+|   |   agent = A267: 0 (0.0)
+|   |   agent = A227: 0 (0.0)
+|   |   agent = A247: 0 (1.0)
+|   |   agent = A278: 0 (0.0)
+|   |   agent = A280: 0 (0.0)
+|   |   agent = A285: 0 (0.0)
+|   |   agent = A289: 0 (0.0)
+|   |   agent = A269: 0 (2.0)
+|   |   agent = A295: 0 (0.0)
+|   |   agent = A265: 0 (1.0)
+|   |   agent = A288: 0 (14.0)
+|   |   agent = A122: 0 (0.0)
+|   |   agent = A294: 0 (0.0)
+|   |   agent = A325: 0 (0.0)
+|   |   agent = A341: 0 (0.0)
+|   |   agent = A344: 0 (0.0)
+|   |   agent = A346: 0 (0.0)
+|   |   agent = A359: 0 (0.0)
+|   |   agent = A283: 0 (1.0)
+|   |   agent = A364: 0 (19.0)
+|   |   agent = A370: 0 (0.0)
+|   |   agent = A371: 0 (0.0)
+|   |   agent = A25: 0 (0.0)
+|   |   agent = A141: 0 (4.0)
+|   |   agent = A391: 0 (0.0)
+|   |   agent = A397: 0 (0.0)
+|   |   agent = A416: 0 (0.0)
+|   |   agent = A404: 0 (2.0)
+|   |   agent = A299: 0 (1.0)
+|   |   agent = A197: 0 (0.0)
+|   |   agent = A73: 0 (0.0)
+|   |   agent = A354: 0 (11.0)
+|   |   agent = A444: 0 (0.0)
+|   |   agent = A408: 0 (0.0)
+|   |   agent = A461: 0 (0.0)
+|   |   agent = A388: 0 (1.0)
+|   |   agent = A453: 0 (1.0)
+|   |   agent = A459: 0 (16.0)
+|   |   agent = A474: 0 (14.0)
+|   |   agent = A475: 0 (8.0)
+|   |   agent = A480: 0 (0.0)
+|   |   agent = A449: 0 (2.0)
+previous_cancellations > 0
+|   lead_time <= 13
+|   |   adults <= 1
+|   |   |   agent = EKSIK
+|   |   |   |   distribution_channel = Direct
+|   |   |   |   |   lead_time <= 7: 0 (41.0/9.0)
+|   |   |   |   |   lead_time > 7: 1 (12.0/1.0)
+|   |   |   |   distribution_channel = Corporate: 0 (327.0/41.0)
+|   |   |   |   distribution_channel = TA/TO: 0 (3.0/1.0)
+|   |   |   |   distribution_channel = Undefined: 0 (0.0)
+|   |   |   |   distribution_channel = GDS: 0 (0.0)
+|   |   |   agent = A304: 0 (0.0)
+|   |   |   agent = A240: 0 (2.0/1.0)
+|   |   |   agent = A303: 0 (0.0)
+|   |   |   agent = A15: 0 (0.0)
+|   |   |   agent = A241: 0 (0.0)
+|   |   |   agent = A8: 1 (1.0)
+|   |   |   agent = A250: 0 (0.0)
+|   |   |   agent = A115: 0 (0.0)
+|   |   |   agent = A5: 0 (0.0)
+|   |   |   agent = A175: 0 (0.0)
+|   |   |   agent = A134: 0 (0.0)
+|   |   |   agent = A156: 0 (0.0)
+|   |   |   agent = A243: 0 (0.0)
+|   |   |   agent = A242: 0 (0.0)
+|   |   |   agent = A3: 0 (0.0)
+|   |   |   agent = A105: 0 (0.0)
+|   |   |   agent = A40: 0 (2.0)
+|   |   |   agent = A147: 0 (0.0)
+|   |   |   agent = A306: 0 (0.0)
+|   |   |   agent = A184: 0 (0.0)
+|   |   |   agent = A96: 0 (0.0)
+|   |   |   agent = A2: 0 (0.0)
+|   |   |   agent = A127: 0 (0.0)
+|   |   |   agent = A95: 0 (0.0)
+|   |   |   agent = A146: 0 (0.0)
+|   |   |   agent = A9
+|   |   |   |   previous_cancellations <= 2: 1 (17.0)
+|   |   |   |   previous_cancellations > 2: 0 (6.0)
+|   |   |   agent = A177: 0 (0.0)
+|   |   |   agent = A6: 1 (3.0)
+|   |   |   agent = A143: 0 (0.0)
+|   |   |   agent = A244: 0 (0.0)
+|   |   |   agent = A149: 0 (0.0)
+|   |   |   agent = A167: 0 (0.0)
+|   |   |   agent = A300: 0 (0.0)
+|   |   |   agent = A171: 0 (0.0)
+|   |   |   agent = A305: 0 (0.0)
+|   |   |   agent = A67: 0 (0.0)
+|   |   |   agent = A196: 0 (0.0)
+|   |   |   agent = A152: 0 (0.0)
+|   |   |   agent = A142: 0 (0.0)
+|   |   |   agent = A261: 0 (0.0)
+|   |   |   agent = A104: 0 (0.0)
+|   |   |   agent = A36: 0 (0.0)
+|   |   |   agent = A26: 0 (0.0)
+|   |   |   agent = A29: 0 (0.0)
+|   |   |   agent = A258: 0 (0.0)
+|   |   |   agent = A110: 0 (0.0)
+|   |   |   agent = A71: 0 (0.0)
+|   |   |   agent = A181: 0 (0.0)
+|   |   |   agent = A88: 0 (15.0)
+|   |   |   agent = A251: 0 (0.0)
+|   |   |   agent = A275: 0 (0.0)
+|   |   |   agent = A69: 0 (0.0)
+|   |   |   agent = A248: 0 (0.0)
+|   |   |   agent = A208: 0 (0.0)
+|   |   |   agent = A256: 0 (0.0)
+|   |   |   agent = A314: 0 (3.0)
+|   |   |   agent = A126: 0 (0.0)
+|   |   |   agent = A281: 0 (0.0)
+|   |   |   agent = A273: 0 (0.0)
+|   |   |   agent = A253: 0 (0.0)
+|   |   |   agent = A185: 0 (0.0)
+|   |   |   agent = A330: 0 (0.0)
+|   |   |   agent = A334: 0 (0.0)
+|   |   |   agent = A328: 0 (0.0)
+|   |   |   agent = A326: 0 (0.0)
+|   |   |   agent = A321: 0 (0.0)
+|   |   |   agent = A324: 0 (0.0)
+|   |   |   agent = A313: 0 (0.0)
+|   |   |   agent = A38: 0 (0.0)
+|   |   |   agent = A155: 0 (0.0)
+|   |   |   agent = A68: 0 (0.0)
+|   |   |   agent = A335: 0 (0.0)
+|   |   |   agent = A308: 0 (0.0)
+|   |   |   agent = A332: 0 (0.0)
+|   |   |   agent = A94: 0 (10.0)
+|   |   |   agent = A348: 0 (0.0)
+|   |   |   agent = A310: 0 (0.0)
+|   |   |   agent = A339: 0 (0.0)
+|   |   |   agent = A375: 0 (0.0)
+|   |   |   agent = A66: 0 (0.0)
+|   |   |   agent = A327: 0 (0.0)
+|   |   |   agent = A387: 0 (0.0)
+|   |   |   agent = A298: 0 (0.0)
+|   |   |   agent = A91: 0 (0.0)
+|   |   |   agent = A245: 0 (0.0)
+|   |   |   agent = A385: 0 (0.0)
+|   |   |   agent = A257: 0 (0.0)
+|   |   |   agent = A393: 0 (0.0)
+|   |   |   agent = A168: 0 (0.0)
+|   |   |   agent = A405: 0 (0.0)
+|   |   |   agent = A249: 0 (0.0)
+|   |   |   agent = A315: 0 (0.0)
+|   |   |   agent = A75: 1 (1.0)
+|   |   |   agent = A128: 0 (0.0)
+|   |   |   agent = A307: 0 (0.0)
+|   |   |   agent = A11: 0 (0.0)
+|   |   |   agent = A436: 0 (0.0)
+|   |   |   agent = A1: 1 (1.0)
+|   |   |   agent = A201: 0 (0.0)
+|   |   |   agent = A183: 0 (0.0)
+|   |   |   agent = A223: 0 (0.0)
+|   |   |   agent = A368: 0 (0.0)
+|   |   |   agent = A336: 0 (0.0)
+|   |   |   agent = A291: 0 (0.0)
+|   |   |   agent = A464: 0 (0.0)
+|   |   |   agent = A411: 0 (0.0)
+|   |   |   agent = A481: 0 (0.0)
+|   |   |   agent = A10: 0 (0.0)
+|   |   |   agent = A154: 0 (0.0)
+|   |   |   agent = A468: 0 (0.0)
+|   |   |   agent = A410: 0 (0.0)
+|   |   |   agent = A390: 0 (0.0)
+|   |   |   agent = A440: 0 (0.0)
+|   |   |   agent = A495: 0 (0.0)
+|   |   |   agent = A492: 0 (0.0)
+|   |   |   agent = A493: 0 (0.0)
+|   |   |   agent = A434: 0 (0.0)
+|   |   |   agent = A57: 0 (0.0)
+|   |   |   agent = A531: 0 (0.0)
+|   |   |   agent = A420: 0 (0.0)
+|   |   |   agent = A483: 0 (0.0)
+|   |   |   agent = A526: 0 (0.0)
+|   |   |   agent = A472: 0 (0.0)
+|   |   |   agent = A429: 0 (0.0)
+|   |   |   agent = A16: 0 (0.0)
+|   |   |   agent = A446: 0 (0.0)
+|   |   |   agent = A34: 0 (0.0)
+|   |   |   agent = A78: 1 (5.0)
+|   |   |   agent = A139: 0 (0.0)
+|   |   |   agent = A252: 0 (0.0)
+|   |   |   agent = A270: 0 (1.0)
+|   |   |   agent = A47: 0 (9.0)
+|   |   |   agent = A114: 0 (0.0)
+|   |   |   agent = A301: 0 (0.0)
+|   |   |   agent = A193: 0 (0.0)
+|   |   |   agent = A182: 0 (0.0)
+|   |   |   agent = A135: 0 (0.0)
+|   |   |   agent = A350: 0 (0.0)
+|   |   |   agent = A195: 1 (1.0)
+|   |   |   agent = A352: 0 (0.0)
+|   |   |   agent = A355: 0 (0.0)
+|   |   |   agent = A159: 0 (0.0)
+|   |   |   agent = A363: 0 (0.0)
+|   |   |   agent = A384: 0 (0.0)
+|   |   |   agent = A360: 0 (0.0)
+|   |   |   agent = A331: 0 (0.0)
+|   |   |   agent = A367: 0 (0.0)
+|   |   |   agent = A64: 0 (0.0)
+|   |   |   agent = A406: 0 (0.0)
+|   |   |   agent = A163: 0 (0.0)
+|   |   |   agent = A414: 0 (0.0)
+|   |   |   agent = A333: 0 (0.0)
+|   |   |   agent = A427: 0 (0.0)
+|   |   |   agent = A431: 0 (0.0)
+|   |   |   agent = A430: 0 (0.0)
+|   |   |   agent = A426: 0 (0.0)
+|   |   |   agent = A438: 0 (0.0)
+|   |   |   agent = A433: 0 (0.0)
+|   |   |   agent = A418: 0 (0.0)
+|   |   |   agent = A441: 0 (0.0)
+|   |   |   agent = A282: 0 (0.0)
+|   |   |   agent = A432: 0 (0.0)
+|   |   |   agent = A72: 0 (0.0)
+|   |   |   agent = A450: 0 (0.0)
+|   |   |   agent = A180: 0 (0.0)
+|   |   |   agent = A454: 0 (0.0)
+|   |   |   agent = A455: 0 (0.0)
+|   |   |   agent = A59: 0 (0.0)
+|   |   |   agent = A451: 0 (0.0)
+|   |   |   agent = A254: 0 (0.0)
+|   |   |   agent = A358: 0 (0.0)
+|   |   |   agent = A469: 0 (0.0)
+|   |   |   agent = A165: 0 (0.0)
+|   |   |   agent = A467: 0 (0.0)
+|   |   |   agent = A510: 0 (0.0)
+|   |   |   agent = A337: 0 (0.0)
+|   |   |   agent = A476: 0 (0.0)
+|   |   |   agent = A502: 0 (0.0)
+|   |   |   agent = A527: 0 (0.0)
+|   |   |   agent = A479: 0 (0.0)
+|   |   |   agent = A508: 0 (0.0)
+|   |   |   agent = A535: 0 (0.0)
+|   |   |   agent = A302: 0 (0.0)
+|   |   |   agent = A497: 0 (0.0)
+|   |   |   agent = A187: 0 (0.0)
+|   |   |   agent = A13: 0 (0.0)
+|   |   |   agent = A7: 0 (1.0)
+|   |   |   agent = A27: 0 (0.0)
+|   |   |   agent = A14: 1 (4.0)
+|   |   |   agent = A22: 0 (0.0)
+|   |   |   agent = A17: 0 (0.0)
+|   |   |   agent = A28: 0 (0.0)
+|   |   |   agent = A42: 0 (0.0)
+|   |   |   agent = A20: 0 (0.0)
+|   |   |   agent = A19: 1 (1.0)
+|   |   |   agent = A45: 1 (1.0)
+|   |   |   agent = A37: 0 (0.0)
+|   |   |   agent = A61: 0 (0.0)
+|   |   |   agent = A39: 0 (0.0)
+|   |   |   agent = A21: 0 (0.0)
+|   |   |   agent = A24: 0 (0.0)
+|   |   |   agent = A41: 0 (0.0)
+|   |   |   agent = A50: 1 (3.0)
+|   |   |   agent = A30: 1 (3.0)
+|   |   |   agent = A54: 0 (0.0)
+|   |   |   agent = A52: 0 (0.0)
+|   |   |   agent = A12: 0 (0.0)
+|   |   |   agent = A44: 0 (0.0)
+|   |   |   agent = A31: 0 (0.0)
+|   |   |   agent = A83: 0 (0.0)
+|   |   |   agent = A32: 0 (0.0)
+|   |   |   agent = A63: 0 (0.0)
+|   |   |   agent = A60: 0 (0.0)
+|   |   |   agent = A55: 0 (0.0)
+|   |   |   agent = A56: 0 (0.0)
+|   |   |   agent = A89: 0 (0.0)
+|   |   |   agent = A87: 0 (0.0)
+|   |   |   agent = A118: 0 (0.0)
+|   |   |   agent = A86: 0 (0.0)
+|   |   |   agent = A85: 0 (0.0)
+|   |   |   agent = A210: 0 (0.0)
+|   |   |   agent = A214: 0 (0.0)
+|   |   |   agent = A129: 0 (0.0)
+|   |   |   agent = A179: 0 (0.0)
+|   |   |   agent = A138: 0 (0.0)
+|   |   |   agent = A174: 0 (0.0)
+|   |   |   agent = A170: 0 (0.0)
+|   |   |   agent = A153: 0 (0.0)
+|   |   |   agent = A93: 0 (0.0)
+|   |   |   agent = A151: 0 (0.0)
+|   |   |   agent = A119: 0 (0.0)
+|   |   |   agent = A35: 0 (0.0)
+|   |   |   agent = A173: 0 (0.0)
+|   |   |   agent = A58: 0 (0.0)
+|   |   |   agent = A53: 0 (0.0)
+|   |   |   agent = A133: 0 (0.0)
+|   |   |   agent = A79: 0 (0.0)
+|   |   |   agent = A235: 0 (0.0)
+|   |   |   agent = A192: 0 (0.0)
+|   |   |   agent = A191: 0 (0.0)
+|   |   |   agent = A236: 0 (0.0)
+|   |   |   agent = A162: 0 (0.0)
+|   |   |   agent = A215: 0 (0.0)
+|   |   |   agent = A157: 0 (0.0)
+|   |   |   agent = A287: 0 (0.0)
+|   |   |   agent = A132: 0 (0.0)
+|   |   |   agent = A234: 0 (0.0)
+|   |   |   agent = A98: 0 (0.0)
+|   |   |   agent = A77: 0 (0.0)
+|   |   |   agent = A103: 0 (0.0)
+|   |   |   agent = A107: 0 (0.0)
+|   |   |   agent = A262: 0 (0.0)
+|   |   |   agent = A220: 0 (0.0)
+|   |   |   agent = A121: 0 (0.0)
+|   |   |   agent = A205: 0 (0.0)
+|   |   |   agent = A378: 0 (0.0)
+|   |   |   agent = A23: 0 (0.0)
+|   |   |   agent = A296: 0 (0.0)
+|   |   |   agent = A290: 0 (0.0)
+|   |   |   agent = A229: 0 (0.0)
+|   |   |   agent = A33: 0 (0.0)
+|   |   |   agent = A286: 0 (0.0)
+|   |   |   agent = A276: 0 (0.0)
+|   |   |   agent = A425: 0 (0.0)
+|   |   |   agent = A484: 0 (0.0)
+|   |   |   agent = A323: 0 (0.0)
+|   |   |   agent = A403: 0 (0.0)
+|   |   |   agent = A219: 0 (0.0)
+|   |   |   agent = A394: 0 (0.0)
+|   |   |   agent = A509: 0 (0.0)
+|   |   |   agent = A111: 0 (0.0)
+|   |   |   agent = A423: 0 (0.0)
+|   |   |   agent = A4: 0 (0.0)
+|   |   |   agent = A70: 0 (0.0)
+|   |   |   agent = A82: 0 (0.0)
+|   |   |   agent = A81: 0 (0.0)
+|   |   |   agent = A74: 0 (0.0)
+|   |   |   agent = A92: 0 (0.0)
+|   |   |   agent = A99: 1 (1.0)
+|   |   |   agent = A90: 0 (0.0)
+|   |   |   agent = A112: 0 (0.0)
+|   |   |   agent = A117: 0 (0.0)
+|   |   |   agent = A106: 0 (0.0)
+|   |   |   agent = A148: 0 (0.0)
+|   |   |   agent = A158: 0 (0.0)
+|   |   |   agent = A144: 0 (0.0)
+|   |   |   agent = A211: 0 (0.0)
+|   |   |   agent = A213: 0 (0.0)
+|   |   |   agent = A216: 0 (0.0)
+|   |   |   agent = A232: 0 (0.0)
+|   |   |   agent = A150: 0 (0.0)
+|   |   |   agent = A267: 0 (0.0)
+|   |   |   agent = A227: 0 (0.0)
+|   |   |   agent = A247: 0 (0.0)
+|   |   |   agent = A278: 0 (0.0)
+|   |   |   agent = A280: 0 (0.0)
+|   |   |   agent = A285: 0 (0.0)
+|   |   |   agent = A289: 0 (0.0)
+|   |   |   agent = A269: 0 (0.0)
+|   |   |   agent = A295: 0 (0.0)
+|   |   |   agent = A265: 0 (0.0)
+|   |   |   agent = A288: 0 (0.0)
+|   |   |   agent = A122: 0 (0.0)
+|   |   |   agent = A294: 0 (0.0)
+|   |   |   agent = A325: 0 (0.0)
+|   |   |   agent = A341: 0 (0.0)
+|   |   |   agent = A344: 0 (0.0)
+|   |   |   agent = A346: 0 (0.0)
+|   |   |   agent = A359: 0 (0.0)
+|   |   |   agent = A283: 0 (0.0)
+|   |   |   agent = A364: 0 (0.0)
+|   |   |   agent = A370: 0 (0.0)
+|   |   |   agent = A371: 0 (0.0)
+|   |   |   agent = A25: 0 (0.0)
+|   |   |   agent = A141: 0 (0.0)
+|   |   |   agent = A391: 0 (0.0)
+|   |   |   agent = A397: 0 (0.0)
+|   |   |   agent = A416: 0 (0.0)
+|   |   |   agent = A404: 0 (0.0)
+|   |   |   agent = A299: 0 (0.0)
+|   |   |   agent = A197: 0 (0.0)
+|   |   |   agent = A73: 0 (0.0)
+|   |   |   agent = A354: 0 (0.0)
+|   |   |   agent = A444: 0 (0.0)
+|   |   |   agent = A408: 0 (0.0)
+|   |   |   agent = A461: 0 (0.0)
+|   |   |   agent = A388: 0 (0.0)
+|   |   |   agent = A453: 0 (0.0)
+|   |   |   agent = A459: 0 (0.0)
+|   |   |   agent = A474: 0 (0.0)
+|   |   |   agent = A475: 0 (0.0)
+|   |   |   agent = A480: 0 (0.0)
+|   |   |   agent = A449: 0 (0.0)
+|   |   adults > 1
+|   |   |   previous_cancellations <= 1
+|   |   |   |   distribution_channel = Direct
+|   |   |   |   |   hotel = Resort Hotel: 0 (9.0/2.0)
+|   |   |   |   |   hotel = City Hotel
+|   |   |   |   |   |   lead_time <= 1: 0 (4.0/1.0)
+|   |   |   |   |   |   lead_time > 1: 1 (20.0/1.0)
+|   |   |   |   distribution_channel = Corporate
+|   |   |   |   |   agent = EKSIK: 0 (13.0/3.0)
+|   |   |   |   |   agent = A304: 1 (0.0)
+|   |   |   |   |   agent = A240: 1 (0.0)
+|   |   |   |   |   agent = A303: 1 (0.0)
+|   |   |   |   |   agent = A15: 1 (0.0)
+|   |   |   |   |   agent = A241: 1 (0.0)
+|   |   |   |   |   agent = A8: 1 (0.0)
+|   |   |   |   |   agent = A250: 1 (0.0)
+|   |   |   |   |   agent = A115: 1 (0.0)
+|   |   |   |   |   agent = A5: 1 (0.0)
+|   |   |   |   |   agent = A175: 1 (0.0)
+|   |   |   |   |   agent = A134: 1 (0.0)
+|   |   |   |   |   agent = A156: 1 (0.0)
+|   |   |   |   |   agent = A243: 1 (0.0)
+|   |   |   |   |   agent = A242: 1 (0.0)
+|   |   |   |   |   agent = A3: 1 (0.0)
+|   |   |   |   |   agent = A105: 1 (0.0)
+|   |   |   |   |   agent = A40: 1 (0.0)
+|   |   |   |   |   agent = A147: 1 (0.0)
+|   |   |   |   |   agent = A306: 1 (0.0)
+|   |   |   |   |   agent = A184: 1 (0.0)
+|   |   |   |   |   agent = A96: 1 (0.0)
+|   |   |   |   |   agent = A2: 1 (0.0)
+|   |   |   |   |   agent = A127: 1 (0.0)
+|   |   |   |   |   agent = A95: 1 (0.0)
+|   |   |   |   |   agent = A146: 1 (0.0)
+|   |   |   |   |   agent = A9: 1 (0.0)
+|   |   |   |   |   agent = A177: 1 (0.0)
+|   |   |   |   |   agent = A6: 1 (0.0)
+|   |   |   |   |   agent = A143: 1 (0.0)
+|   |   |   |   |   agent = A244: 1 (0.0)
+|   |   |   |   |   agent = A149: 1 (0.0)
+|   |   |   |   |   agent = A167: 1 (0.0)
+|   |   |   |   |   agent = A300: 1 (0.0)
+|   |   |   |   |   agent = A171: 1 (0.0)
+|   |   |   |   |   agent = A305: 1 (0.0)
+|   |   |   |   |   agent = A67: 1 (0.0)
+|   |   |   |   |   agent = A196: 1 (0.0)
+|   |   |   |   |   agent = A152: 1 (0.0)
+|   |   |   |   |   agent = A142: 1 (0.0)
+|   |   |   |   |   agent = A261: 1 (0.0)
+|   |   |   |   |   agent = A104: 1 (0.0)
+|   |   |   |   |   agent = A36: 1 (0.0)
+|   |   |   |   |   agent = A26: 1 (0.0)
+|   |   |   |   |   agent = A29: 1 (0.0)
+|   |   |   |   |   agent = A258: 1 (0.0)
+|   |   |   |   |   agent = A110: 1 (0.0)
+|   |   |   |   |   agent = A71: 1 (0.0)
+|   |   |   |   |   agent = A181: 1 (0.0)
+|   |   |   |   |   agent = A88: 1 (0.0)
+|   |   |   |   |   agent = A251: 1 (0.0)
+|   |   |   |   |   agent = A275: 1 (0.0)
+|   |   |   |   |   agent = A69: 1 (0.0)
+|   |   |   |   |   agent = A248: 1 (0.0)
+|   |   |   |   |   agent = A208: 1 (0.0)
+|   |   |   |   |   agent = A256: 1 (0.0)
+|   |   |   |   |   agent = A314: 1 (0.0)
+|   |   |   |   |   agent = A126: 1 (0.0)
+|   |   |   |   |   agent = A281: 1 (0.0)
+|   |   |   |   |   agent = A273: 1 (0.0)
+|   |   |   |   |   agent = A253: 1 (0.0)
+|   |   |   |   |   agent = A185: 1 (0.0)
+|   |   |   |   |   agent = A330: 1 (0.0)
+|   |   |   |   |   agent = A334: 1 (0.0)
+|   |   |   |   |   agent = A328: 1 (0.0)
+|   |   |   |   |   agent = A326: 1 (0.0)
+|   |   |   |   |   agent = A321: 1 (0.0)
+|   |   |   |   |   agent = A324: 1 (0.0)
+|   |   |   |   |   agent = A313: 1 (0.0)
+|   |   |   |   |   agent = A38: 1 (0.0)
+|   |   |   |   |   agent = A155: 1 (0.0)
+|   |   |   |   |   agent = A68: 1 (0.0)
+|   |   |   |   |   agent = A335: 1 (0.0)
+|   |   |   |   |   agent = A308: 1 (0.0)
+|   |   |   |   |   agent = A332: 1 (0.0)
+|   |   |   |   |   agent = A94: 1 (0.0)
+|   |   |   |   |   agent = A348: 1 (0.0)
+|   |   |   |   |   agent = A310: 1 (0.0)
+|   |   |   |   |   agent = A339: 1 (0.0)
+|   |   |   |   |   agent = A375: 1 (0.0)
+|   |   |   |   |   agent = A66: 1 (0.0)
+|   |   |   |   |   agent = A327: 1 (0.0)
+|   |   |   |   |   agent = A387: 1 (0.0)
+|   |   |   |   |   agent = A298: 1 (0.0)
+|   |   |   |   |   agent = A91: 1 (0.0)
+|   |   |   |   |   agent = A245: 1 (0.0)
+|   |   |   |   |   agent = A385: 1 (0.0)
+|   |   |   |   |   agent = A257: 1 (0.0)
+|   |   |   |   |   agent = A393: 1 (0.0)
+|   |   |   |   |   agent = A168: 1 (0.0)
+|   |   |   |   |   agent = A405: 1 (0.0)
+|   |   |   |   |   agent = A249: 1 (0.0)
+|   |   |   |   |   agent = A315: 1 (0.0)
+|   |   |   |   |   agent = A75: 1 (0.0)
+|   |   |   |   |   agent = A128: 1 (0.0)
+|   |   |   |   |   agent = A307: 1 (0.0)
+|   |   |   |   |   agent = A11: 1 (0.0)
+|   |   |   |   |   agent = A436: 1 (0.0)
+|   |   |   |   |   agent = A1: 1 (0.0)
+|   |   |   |   |   agent = A201: 1 (0.0)
+|   |   |   |   |   agent = A183: 1 (0.0)
+|   |   |   |   |   agent = A223: 1 (0.0)
+|   |   |   |   |   agent = A368: 1 (0.0)
+|   |   |   |   |   agent = A336: 1 (0.0)
+|   |   |   |   |   agent = A291: 1 (0.0)
+|   |   |   |   |   agent = A464: 1 (0.0)
+|   |   |   |   |   agent = A411: 1 (0.0)
+|   |   |   |   |   agent = A481: 1 (0.0)
+|   |   |   |   |   agent = A10: 1 (0.0)
+|   |   |   |   |   agent = A154: 1 (0.0)
+|   |   |   |   |   agent = A468: 1 (0.0)
+|   |   |   |   |   agent = A410: 1 (0.0)
+|   |   |   |   |   agent = A390: 1 (0.0)
+|   |   |   |   |   agent = A440: 1 (0.0)
+|   |   |   |   |   agent = A495: 1 (0.0)
+|   |   |   |   |   agent = A492: 1 (0.0)
+|   |   |   |   |   agent = A493: 1 (0.0)
+|   |   |   |   |   agent = A434: 1 (0.0)
+|   |   |   |   |   agent = A57: 1 (0.0)
+|   |   |   |   |   agent = A531: 1 (0.0)
+|   |   |   |   |   agent = A420: 1 (0.0)
+|   |   |   |   |   agent = A483: 1 (0.0)
+|   |   |   |   |   agent = A526: 1 (0.0)
+|   |   |   |   |   agent = A472: 1 (0.0)
+|   |   |   |   |   agent = A429: 1 (0.0)
+|   |   |   |   |   agent = A16: 1 (0.0)
+|   |   |   |   |   agent = A446: 1 (0.0)
+|   |   |   |   |   agent = A34: 1 (0.0)
+|   |   |   |   |   agent = A78: 1 (24.0)
+|   |   |   |   |   agent = A139: 1 (0.0)
+|   |   |   |   |   agent = A252: 1 (0.0)
+|   |   |   |   |   agent = A270: 1 (0.0)
+|   |   |   |   |   agent = A47: 1 (2.0)
+|   |   |   |   |   agent = A114: 1 (0.0)
+|   |   |   |   |   agent = A301: 1 (0.0)
+|   |   |   |   |   agent = A193: 1 (0.0)
+|   |   |   |   |   agent = A182: 1 (0.0)
+|   |   |   |   |   agent = A135: 1 (0.0)
+|   |   |   |   |   agent = A350: 1 (0.0)
+|   |   |   |   |   agent = A195: 1 (0.0)
+|   |   |   |   |   agent = A352: 1 (0.0)
+|   |   |   |   |   agent = A355: 1 (0.0)
+|   |   |   |   |   agent = A159: 1 (0.0)
+|   |   |   |   |   agent = A363: 1 (0.0)
+|   |   |   |   |   agent = A384: 1 (0.0)
+|   |   |   |   |   agent = A360: 1 (0.0)
+|   |   |   |   |   agent = A331: 1 (0.0)
+|   |   |   |   |   agent = A367: 1 (0.0)
+|   |   |   |   |   agent = A64: 1 (0.0)
+|   |   |   |   |   agent = A406: 1 (0.0)
+|   |   |   |   |   agent = A163: 1 (0.0)
+|   |   |   |   |   agent = A414: 1 (0.0)
+|   |   |   |   |   agent = A333: 1 (0.0)
+|   |   |   |   |   agent = A427: 1 (0.0)
+|   |   |   |   |   agent = A431: 1 (0.0)
+|   |   |   |   |   agent = A430: 1 (0.0)
+|   |   |   |   |   agent = A426: 1 (0.0)
+|   |   |   |   |   agent = A438: 1 (0.0)
+|   |   |   |   |   agent = A433: 1 (0.0)
+|   |   |   |   |   agent = A418: 1 (0.0)
+|   |   |   |   |   agent = A441: 1 (0.0)
+|   |   |   |   |   agent = A282: 1 (0.0)
+|   |   |   |   |   agent = A432: 1 (0.0)
+|   |   |   |   |   agent = A72: 1 (0.0)
+|   |   |   |   |   agent = A450: 1 (0.0)
+|   |   |   |   |   agent = A180: 1 (0.0)
+|   |   |   |   |   agent = A454: 1 (0.0)
+|   |   |   |   |   agent = A455: 1 (0.0)
+|   |   |   |   |   agent = A59: 1 (0.0)
+|   |   |   |   |   agent = A451: 1 (0.0)
+|   |   |   |   |   agent = A254: 1 (0.0)
+|   |   |   |   |   agent = A358: 1 (0.0)
+|   |   |   |   |   agent = A469: 1 (0.0)
+|   |   |   |   |   agent = A165: 1 (0.0)
+|   |   |   |   |   agent = A467: 1 (0.0)
+|   |   |   |   |   agent = A510: 1 (0.0)
+|   |   |   |   |   agent = A337: 1 (0.0)
+|   |   |   |   |   agent = A476: 1 (0.0)
+|   |   |   |   |   agent = A502: 1 (0.0)
+|   |   |   |   |   agent = A527: 1 (0.0)
+|   |   |   |   |   agent = A479: 1 (0.0)
+|   |   |   |   |   agent = A508: 1 (0.0)
+|   |   |   |   |   agent = A535: 1 (0.0)
+|   |   |   |   |   agent = A302: 1 (0.0)
+|   |   |   |   |   agent = A497: 1 (0.0)
+|   |   |   |   |   agent = A187: 1 (0.0)
+|   |   |   |   |   agent = A13: 1 (0.0)
+|   |   |   |   |   agent = A7: 1 (0.0)
+|   |   |   |   |   agent = A27: 1 (0.0)
+|   |   |   |   |   agent = A14: 1 (0.0)
+|   |   |   |   |   agent = A22: 1 (0.0)
+|   |   |   |   |   agent = A17: 1 (0.0)
+|   |   |   |   |   agent = A28: 1 (0.0)
+|   |   |   |   |   agent = A42: 1 (0.0)
+|   |   |   |   |   agent = A20: 1 (0.0)
+|   |   |   |   |   agent = A19: 1 (0.0)
+|   |   |   |   |   agent = A45: 1 (0.0)
+|   |   |   |   |   agent = A37: 1 (0.0)
+|   |   |   |   |   agent = A61: 1 (0.0)
+|   |   |   |   |   agent = A39: 1 (0.0)
+|   |   |   |   |   agent = A21: 1 (0.0)
+|   |   |   |   |   agent = A24: 1 (0.0)
+|   |   |   |   |   agent = A41: 1 (0.0)
+|   |   |   |   |   agent = A50: 1 (0.0)
+|   |   |   |   |   agent = A30: 1 (0.0)
+|   |   |   |   |   agent = A54: 1 (0.0)
+|   |   |   |   |   agent = A52: 1 (0.0)
+|   |   |   |   |   agent = A12: 1 (0.0)
+|   |   |   |   |   agent = A44: 1 (0.0)
+|   |   |   |   |   agent = A31: 1 (0.0)
+|   |   |   |   |   agent = A83: 1 (0.0)
+|   |   |   |   |   agent = A32: 1 (0.0)
+|   |   |   |   |   agent = A63: 1 (0.0)
+|   |   |   |   |   agent = A60: 1 (0.0)
+|   |   |   |   |   agent = A55: 1 (0.0)
+|   |   |   |   |   agent = A56: 1 (0.0)
+|   |   |   |   |   agent = A89: 1 (0.0)
+|   |   |   |   |   agent = A87: 1 (0.0)
+|   |   |   |   |   agent = A118: 1 (0.0)
+|   |   |   |   |   agent = A86: 1 (0.0)
+|   |   |   |   |   agent = A85: 1 (0.0)
+|   |   |   |   |   agent = A210: 1 (0.0)
+|   |   |   |   |   agent = A214: 1 (0.0)
+|   |   |   |   |   agent = A129: 1 (0.0)
+|   |   |   |   |   agent = A179: 1 (0.0)
+|   |   |   |   |   agent = A138: 1 (0.0)
+|   |   |   |   |   agent = A174: 1 (0.0)
+|   |   |   |   |   agent = A170: 1 (0.0)
+|   |   |   |   |   agent = A153: 1 (0.0)
+|   |   |   |   |   agent = A93: 1 (0.0)
+|   |   |   |   |   agent = A151: 1 (0.0)
+|   |   |   |   |   agent = A119: 1 (0.0)
+|   |   |   |   |   agent = A35: 1 (0.0)
+|   |   |   |   |   agent = A173: 1 (0.0)
+|   |   |   |   |   agent = A58: 1 (0.0)
+|   |   |   |   |   agent = A53: 1 (0.0)
+|   |   |   |   |   agent = A133: 1 (0.0)
+|   |   |   |   |   agent = A79: 1 (0.0)
+|   |   |   |   |   agent = A235: 1 (0.0)
+|   |   |   |   |   agent = A192: 1 (0.0)
+|   |   |   |   |   agent = A191: 1 (0.0)
+|   |   |   |   |   agent = A236: 1 (0.0)
+|   |   |   |   |   agent = A162: 1 (0.0)
+|   |   |   |   |   agent = A215: 1 (0.0)
+|   |   |   |   |   agent = A157: 1 (0.0)
+|   |   |   |   |   agent = A287: 1 (0.0)
+|   |   |   |   |   agent = A132: 1 (0.0)
+|   |   |   |   |   agent = A234: 1 (0.0)
+|   |   |   |   |   agent = A98: 1 (0.0)
+|   |   |   |   |   agent = A77: 1 (0.0)
+|   |   |   |   |   agent = A103: 1 (0.0)
+|   |   |   |   |   agent = A107: 1 (0.0)
+|   |   |   |   |   agent = A262: 1 (0.0)
+|   |   |   |   |   agent = A220: 1 (0.0)
+|   |   |   |   |   agent = A121: 1 (0.0)
+|   |   |   |   |   agent = A205: 1 (0.0)
+|   |   |   |   |   agent = A378: 1 (0.0)
+|   |   |   |   |   agent = A23: 1 (0.0)
+|   |   |   |   |   agent = A296: 1 (0.0)
+|   |   |   |   |   agent = A290: 1 (0.0)
+|   |   |   |   |   agent = A229: 1 (0.0)
+|   |   |   |   |   agent = A33: 1 (0.0)
+|   |   |   |   |   agent = A286: 1 (0.0)
+|   |   |   |   |   agent = A276: 1 (0.0)
+|   |   |   |   |   agent = A425: 1 (0.0)
+|   |   |   |   |   agent = A484: 1 (0.0)
+|   |   |   |   |   agent = A323: 1 (0.0)
+|   |   |   |   |   agent = A403: 1 (0.0)
+|   |   |   |   |   agent = A219: 1 (0.0)
+|   |   |   |   |   agent = A394: 1 (0.0)
+|   |   |   |   |   agent = A509: 1 (0.0)
+|   |   |   |   |   agent = A111: 1 (0.0)
+|   |   |   |   |   agent = A423: 1 (0.0)
+|   |   |   |   |   agent = A4: 1 (0.0)
+|   |   |   |   |   agent = A70: 1 (0.0)
+|   |   |   |   |   agent = A82: 1 (0.0)
+|   |   |   |   |   agent = A81: 1 (0.0)
+|   |   |   |   |   agent = A74: 1 (0.0)
+|   |   |   |   |   agent = A92: 1 (0.0)
+|   |   |   |   |   agent = A99: 1 (0.0)
+|   |   |   |   |   agent = A90: 1 (0.0)
+|   |   |   |   |   agent = A112: 1 (0.0)
+|   |   |   |   |   agent = A117: 1 (0.0)
+|   |   |   |   |   agent = A106: 1 (0.0)
+|   |   |   |   |   agent = A148: 1 (0.0)
+|   |   |   |   |   agent = A158: 1 (0.0)
+|   |   |   |   |   agent = A144: 1 (0.0)
+|   |   |   |   |   agent = A211: 1 (0.0)
+|   |   |   |   |   agent = A213: 1 (0.0)
+|   |   |   |   |   agent = A216: 1 (0.0)
+|   |   |   |   |   agent = A232: 1 (0.0)
+|   |   |   |   |   agent = A150: 1 (0.0)
+|   |   |   |   |   agent = A267: 1 (0.0)
+|   |   |   |   |   agent = A227: 1 (0.0)
+|   |   |   |   |   agent = A247: 1 (0.0)
+|   |   |   |   |   agent = A278: 1 (0.0)
+|   |   |   |   |   agent = A280: 1 (0.0)
+|   |   |   |   |   agent = A285: 1 (0.0)
+|   |   |   |   |   agent = A289: 1 (0.0)
+|   |   |   |   |   agent = A269: 1 (0.0)
+|   |   |   |   |   agent = A295: 1 (0.0)
+|   |   |   |   |   agent = A265: 1 (0.0)
+|   |   |   |   |   agent = A288: 1 (0.0)
+|   |   |   |   |   agent = A122: 1 (0.0)
+|   |   |   |   |   agent = A294: 1 (0.0)
+|   |   |   |   |   agent = A325: 1 (0.0)
+|   |   |   |   |   agent = A341: 1 (0.0)
+|   |   |   |   |   agent = A344: 1 (0.0)
+|   |   |   |   |   agent = A346: 1 (0.0)
+|   |   |   |   |   agent = A359: 1 (0.0)
+|   |   |   |   |   agent = A283: 1 (0.0)
+|   |   |   |   |   agent = A364: 1 (0.0)
+|   |   |   |   |   agent = A370: 1 (0.0)
+|   |   |   |   |   agent = A371: 1 (0.0)
+|   |   |   |   |   agent = A25: 1 (0.0)
+|   |   |   |   |   agent = A141: 1 (0.0)
+|   |   |   |   |   agent = A391: 1 (0.0)
+|   |   |   |   |   agent = A397: 1 (0.0)
+|   |   |   |   |   agent = A416: 1 (0.0)
+|   |   |   |   |   agent = A404: 1 (0.0)
+|   |   |   |   |   agent = A299: 1 (0.0)
+|   |   |   |   |   agent = A197: 1 (0.0)
+|   |   |   |   |   agent = A73: 1 (0.0)
+|   |   |   |   |   agent = A354: 1 (0.0)
+|   |   |   |   |   agent = A444: 1 (0.0)
+|   |   |   |   |   agent = A408: 1 (0.0)
+|   |   |   |   |   agent = A461: 1 (0.0)
+|   |   |   |   |   agent = A388: 1 (0.0)
+|   |   |   |   |   agent = A453: 1 (0.0)
+|   |   |   |   |   agent = A459: 1 (0.0)
+|   |   |   |   |   agent = A474: 1 (0.0)
+|   |   |   |   |   agent = A475: 1 (0.0)
+|   |   |   |   |   agent = A480: 1 (0.0)
+|   |   |   |   |   agent = A449: 1 (0.0)
+|   |   |   |   distribution_channel = TA/TO: 1 (115.0/2.0)
+|   |   |   |   distribution_channel = Undefined: 1 (0.0)
+|   |   |   |   distribution_channel = GDS: 1 (0.0)
+|   |   |   previous_cancellations > 1: 0 (45.0/6.0)
+|   lead_time > 13
+|   |   distribution_channel = Direct: 1 (156.0/29.0)
+|   |   distribution_channel = Corporate
+|   |   |   lead_time <= 98
+|   |   |   |   adults <= 1
+|   |   |   |   |   lead_time <= 16
+|   |   |   |   |   |   previous_cancellations <= 4
+|   |   |   |   |   |   |   lead_time <= 15: 0 (4.0/1.0)
+|   |   |   |   |   |   |   lead_time > 15
+|   |   |   |   |   |   |   |   hotel = Resort Hotel: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   hotel = City Hotel: 1 (20.0/1.0)
+|   |   |   |   |   |   previous_cancellations > 4: 0 (2.0)
+|   |   |   |   |   lead_time > 16: 0 (83.0/19.0)
+|   |   |   |   adults > 1
+|   |   |   |   |   lead_time <= 32: 1 (12.0/1.0)
+|   |   |   |   |   lead_time > 32: 0 (2.0)
+|   |   |   lead_time > 98
+|   |   |   |   adults <= 1
+|   |   |   |   |   lead_time <= 230: 0 (4.0)
+|   |   |   |   |   lead_time > 230: 1 (41.0)
+|   |   |   |   adults > 1: 1 (161.0)
+|   |   distribution_channel = TA/TO: 1 (5290.0/3.0)
+|   |   distribution_channel = Undefined: 1 (0.0)
+|   |   distribution_channel = GDS: 1 (0.0)
+
+Number of Leaves  : 	1623
+
+Size of the tree : 	2213
+
+
+Time taken to build model: 2.53 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       93068               77.9529 %
+Incorrectly Classified Instances     26322               22.0471 %
+Kappa statistic                          0.4857
+Mean absolute error                      0.2877
+Root mean squared error                  0.3827
+Relative absolute error                 61.6852 %
+Root relative squared error             79.2382 %
+Total Number of Instances           119390     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.941    0.494    0.764      0.941    0.843      0.516    0.835     0.872     0
+                 0.506    0.059    0.834      0.506    0.630      0.516    0.835     0.795     1
+Weighted Avg.    0.780    0.333    0.790      0.780    0.764      0.516    0.835     0.844     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 70703  4463 |     a = 0
+ 21859 22365 |     b = 1
+
