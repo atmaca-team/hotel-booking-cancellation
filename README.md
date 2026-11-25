@@ -39,9 +39,9 @@ Bir otel rezervasyonunun iptal edilip edilmeyeceği (iptal veya No-Show), rezerv
 ```
 ├── README.md
 ├── proje1/
-│   └── BIL545_Proje1_[GrupAdi].ipynb
+│   └── BIL545_Proje1_Atmaca.ipynb
 └── proje2/
-    └── BIL545_Proje2_[GrupAdi].ipynb
+    └── BIL545_Proje2_Atmaca.ipynb
 
 ```
 
