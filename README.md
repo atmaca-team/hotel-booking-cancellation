@@ -58,6 +58,9 @@ Defterin ürettiği dosyalar (`HotelBooking_Weka.arff`, `bolum3_islemler.arff`, 
 3. **Çalışma Zamanı → Tümünü çalıştır.** Kütüphane sürümleri defterin ilk hücresinde yazdırılır; `mlxtend` 0.25.0 sürümüyle kurulur. Tüm defterin çalışması standart Colab makinesinde yaklaşık [süre] sürer (en uzun adım 2.1'deki model karşılaştırması).
 4. 1.7 ve 3.4'teki ARFF dosyaları Colab'dan indirilir ve Weka 3.8 Explorer'da açılır; 3.4'te Weka Apriori ayrıca komut satırından da çalıştırılır.
 
+**Sunum Linki:** https://drive.google.com/file/d/1o716nHL3CTPog851tNR7boMembVdiM2v/view?usp=drive_link
+
+
 ## Sonuç özeti
 
 Bütün sonuçlar katmanlı 5 kat × 5 tekrar çapraz doğrulamadan (25 bölme), ortalama ± standart sapma olarak verilmiştir; ana ölçüt iptal sınıfının F1 değeridir.
