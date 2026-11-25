@@ -51,7 +51,7 @@ Defterin ürettiği dosyalar (`HotelBooking_Weka.arff`, `bolum3_islemler.arff`, 
 
 1. Defteri Colab'da açın: [Proje 1 Colab bağlantısı]
 2. Veri ilk hücrelerde internetten otomatik indirilir; ek bir adım gerekmez.
-3. **Çalışma Zamanı → Tümünü çalıştır.** Kütüphane sürümleri defterin ilk hücresinde yazdırılır; `mlxtend` 0.25.0 sürümüyle kurulur. Tüm defterin çalışması standart Colab makinesinde yaklaşık [süre] sürer (en uzun adım 2.1'deki model karşılaştırması).
+3. **Çalışma Zamanı → Tümünü çalıştır.** Kütüphane sürümleri defterin ilk hücresinde yazdırılır; `mlxtend` 0.25.0 sürümüyle kurulur. Tüm defterin çalışması standart Colab makinesinde yaklaşık 1 saat 31 dk 43 sn. sürer (en uzun adım 2.1'deki model karşılaştırması).
 4. 1.7 ve 3.4'teki ARFF dosyaları Colab'dan indirilir ve Weka 3.8 Explorer'da açılır; 3.4'te Weka Apriori ayrıca komut satırından da çalıştırılır.
 
 **Sunum Linki:** https://drive.google.com/file/d/1o716nHL3CTPog851tNR7boMembVdiM2v/view?usp=drive_link
