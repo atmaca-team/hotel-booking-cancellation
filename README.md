@@ -37,16 +37,12 @@ Bir otel rezervasyonunun iptal edilip edilmeyeceği (iptal veya No-Show), rezerv
 ## Depo yapısı
 
 ```
-.
 ├── README.md
 ├── proje1/
-│   ├── BIL545_Proje1_Atmaca.ipynb
-│   └── weka/
-│       ├── 1.7_ZeroR_J48_cikti.txt
-│       ├── 3.4_weka_output.txt
-│       └── ekran_goruntuleri/
+│   └── BIL545_Proje1_[GrupAdi].ipynb
 └── proje2/
-    └── BIL545_Proje2_Atmaca.ipynb
+    └── BIL545_Proje2_[GrupAdi].ipynb
+
 ```
 
 Defterin ürettiği dosyalar (`HotelBooking_Weka.arff`, `bolum3_islemler.arff`, `bolum3_weka_apriori.txt`, `proje2_aktarim/`) defter çalıştırılınca yeniden oluşur. Veri içerdikleri için ARFF dosyaları ve `proje2_aktarim/p1_temiz_veri.csv` depoya konmamıştır.
