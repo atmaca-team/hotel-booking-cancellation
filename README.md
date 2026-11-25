@@ -9,10 +9,10 @@
 
 | Üye | Öğrenci no |
 |---|---|
-| Melike Duygu YILDIRIM | 264312005 |
-| Vildan ÇAP | [no] |
-| Melisa LOTFIAZAR | [no] |
-| WAIL ABDULRAQEB MOHAMMED NOMAN | [no] |
+|Melike Duygu YILDIRIM| 264312005|
+|Vildan ÇAP  |264329001 |
+|Melisa LOTFIAZAR| 264312902 |
+|WAIL ABDULRAQEB MOHAMMED NOMAN | 264312901 |
 
 - **Grup adı:** ATM​​ACA Team
 - **İletişim sorumlusu:** Melike Duygu YILDIRIM -melikedyg@gmail.com
@@ -67,10 +67,10 @@ Bütün sonuçlar katmanlı 5 kat × 5 tekrar çapraz doğrulamadan (25 bölme),
 - **En iyi model:** Rastgele orman (100 ağaç, `min_samples_leaf=2`, nadir One-Hot ön işleme, tek `Pipeline`): F1 0,7166 ± 0,0043, ROC-AUC 0,8890 ± 0,0020. k-NN'den farkı McNemar (p ≈ 1,6·10⁻³⁵) ve 5×2 ÇD t-testinde (p ≈ 3,7·10⁻⁵) anlamlı çıktı.
 - **Sızıntı deneyi:** Doğru kurulum (ön işleme ve öznitelik seçimi `Pipeline` içinde) F1 0,4676 ± 0,0056; yanlış kurulum (bütün veride) F1 0,4664 ± 0,0053. Bu veride fark küçük çıktı, ama yanlış kurulumdaki skor test bilgisi içerdiği için geçerli kabul edilmedi.
 - **Önemli bulgular:**
-  - Satırların %26,80'i (31.994) başka bir satırın birebir kopyası. Kopyalar çıkarılınca rastgele ormanın F1'i 0,7163'ten 0,4571'e, ROC-AUC'si 0,8893'ten 0,7939'a düşüyor; bu yüzden raporlanan skorları yeni rezervasyonlar için iyimser bir üst sınır olarak görüyoruz.
-  - `reservation_status` ve `reservation_status_date` kesin sızıntı olduğu için, `booking_changes`, `assigned_room_type`, `days_in_waiting_list` ise rezervasyondan sonra oluştuğu için modele alınmadı. Rezervasyon anında bilinip bilinmediği şüpheli `deposit_type` ve `country` eklenince F1 0,7769'a çıkıyor; tahmin anını korumak için bu sütunları kullanmadık.
-  - Birliktelik analizinde (Seçenek B) sonucu iptal olan 121 kural bulundu; Weka Apriori aynı eşiklerde aynı 121 kuralı aynı sayımlarla verdi. Veri küpünde City Hotel'in yüksek iptal oranının büyük kısmı acente (TA/TO) kanalından geliyor; 9 yıl × kanal alt grubunun 2'sinde otel farkının yönü tersine dönüyor.
-
+  - Satırların %26,80'i (31.994) başka bir satırın birebir kopyası. Kopyalar çıkarılınca rastgele ormanın F1'i 0,7163 ± 0,0055'ten 0,4571 ± 0,0036'ya, ROC-AUC'si 0,8893 ± 0,0015'ten 0,7939 ± 0,0010'a düşüyor; bu yüzden raporlanan skorları yeni rezervasyonlar için iyimser bir üst sınır olarak görüyoruz.
+  - `reservation_status` ve `reservation_status_date` kesin sızıntı olduğu için, `booking_changes`, `assigned_room_type` ve `days_in_waiting_list` ise rezervasyondan sonra oluştuğu için modele alınmadı. Rezervasyon anında bilinip bilinmediği şüpheli `deposit_type` ve `country` eklenince F1 0,7769 ± 0,0050'ye çıkıyor; tahmin anını korumak için bu sütunları kullanmadık.
+  - Birliktelik analizinde (Seçenek B) sonucu iptal olan 121 kural bulundu; Weka Apriori aynı eşiklerde aynı 121 kuralı aynı sayımlarla verdi. Veri küpünde City Hotel'in yüksek iptal oranının büyük kısmı acente (TA/TO) kanalından geliyor; yıl × kanal alt gruplarının 9'undan 2'sinde otel farkının yönü tersine dönüyor.
+  - 
 ### Proje 2 (final)
 - **Proje 1'den düzeltilenler:** [Proje 2 tesliminde doldurulacak]
 - **Bölüm bulguları:** [Proje 2 tesliminde doldurulacak]
@@ -80,10 +80,12 @@ Bütün sonuçlar katmanlı 5 kat × 5 tekrar çapraz doğrulamadan (25 bölme),
 
 | Üye | Çalıştığı alt başlıklar ve işler | Sunumda anlattığı alt başlık |
 |---|---|---|
-| Melike Duygu YILDIRIM | [ | [ ] |
-| Vildan ÇAP | [ ] | [ ] |
-| Melisa LOTFIAZAR | [ ] | [ ] |
-| WAIL ABDULRAQEB MOHAMMED NOMAN | [ ] | [ ] |
+| **Melike Duygu YILDIRIM** | 1.1, 1.2, 1.3 | Veri künyesini hazırlama ve kaynak makaleyle karşılaştırma (kayıt sayıları, tarih aralığı, hedefin No-Show'u da kapsaması); keşifsel analiz kodu ve öznitelik künye tablosu (tip, ölçek, eksik oranı, farklı değer, sıfır oranı); yinelenen satırların ve olağan dışı değerlerin tespiti; tahmin anının belirlenmesi ve sızıntı riski olan sütunların sınıflandırılması; ham dosyadaki eksik kodlarının sayılması, eksiklik deseni grafikleri, MCAR/MAR/MNAR değerlendirmesi ve add_indicator deneyi; bu bölümlerin yorumları | 1.1, 1.2, 1.3 |
+| **Vildan ÇAP** | 1.4, 1.5, 1.6, 1.7 | `agent` için dört kodlama yönteminin (standart One-Hot, nadir One-Hot, kat dışı hedef kodlama, bilerek yanlış hedef kodlama) aynı 25 bölmede karşılaştırılması; sızıntı deneyinin doğru (Pipeline içinde) ve yanlış (bütün veride) kurulumları ve hata çubuklu grafik; Dummy baseline'lar ve lojistik regresyonla ilk model, kopya satır kontrolü; Weka için ARFF dosyasının hazırlanması, Weka'da ZeroR ve J48'in 10 kat ÇD ile çalıştırılması ve Python'daki karar ağacıyla karşılaştırılması; bu bölümlerin yorumları | 1.4, 1.5, 1.6, 1.7 |
+| **Melisa LOTFIAZAR** | 2.1, 2.2, 2.3, 2.4, 2.5 | Beş modelin (baseline, karar ağacı, k-NN, rastgele orman, gradyan artırma) aynı 25 bölmede karşılaştırılması, ortalama ± std tablosu ve kutu grafikleri, ölçüt seçiminin gerekçesi; kopya satır ve şüpheli sütun ek kontrolleri; karar ağacının `export_text` ile yorumu; `GridSearchCV.best_score_` ile iç içe ÇD karşılaştırması; McNemar ve 5×2 ÇD t-testi; seçim kuralının yazılması, seçilen modelin ve Proje 2 dosyalarının (`p1_hat.joblib`, `p1_protokol.json`) hazırlanması; bu bölümlerin yorumları | 2.1, 2.2, 2.3, 2.4, 2.5 |
+| **WAIL ABDULRAQEB MOHAMMED NOMAN** | 3.1, 3.2, 3.3, 3.4, E1.1, E1.2, E1.3 | Veri küpünün kurulması (roll-up, drill-down) ve Simpson paradoksu kontrolü; B seçeneğinin gerekçesi, sayısal sütunların ayrıklaştırılması ve işlem tablosunun ARFF olarak kaydedilmesi; Apriori ile hedefe yönelik kuralların çıkarılması, güven/lift/Kulczynski karşılaştırması, nadir kategori analizi ve model önemiyle karşılaştırma; Weka Apriori ile kontrol; `ccp_alpha` budama eğrisi, rastgele ormanda doyum eğrisi (OOB ve test hatası), rastgele sütunla Gini ve permütasyon öneminin karşılaştırılması; bu bölümlerin yorumları | 3.1–3.4, E1.1–E1.3 |
+
+**Not:** Tablodaki bölümler yalnızca iş bölümünü ve sunum paylaşımını gösteriyor; bütün bölümlerde dört üye de kod, analiz ve yorum aşamalarına katkıda bulundu. Katkılarımız GitHub commit geçmişimizle tutarlıdır.
 
 ## Yapay zekâ beyanı
 
@@ -91,12 +93,11 @@ Projede ChatGPT (OpenAI) ve Claude (Anthropic) kullanıldı: kod taslaklarını 
 
 ## Kaynaklar
 
-- Antonio, N., de Almeida, A. ve Nunes, L. (2019). Hotel booking demand datasets. *Data in Brief*, 22, 41–49. https://doi.org/10.1016/j.dib.2018.11.126
-- TidyTuesday (2020-02-11). Hotels veri dosyası. https://github.com/rfordatascience/tidytuesday/tree/main/data/2020/2020-02-11
-- Kaufman, S., Rosset, S., Perlich, C. ve Stitelman, O. (2012). Leakage in data mining: Formulation, detection, and avoidance. *ACM Transactions on Knowledge Discovery from Data*, 6(4), Article 15. https://doi.org/10.1145/2382577.2382579
-- Dietterich, T. G. (1998). Approximate statistical tests for comparing supervised classification learning algorithms. *Neural Computation*, 10(7), 1895–1923. https://doi.org/10.1162/089976698300017197
-- Wu, T., Chen, Y. ve Han, J. (2010). Re-examination of interestingness measures in pattern mining: A unified framework. *Data Mining and Knowledge Discovery*, 21(3), 371–397. https://doi.org/10.1007/s10618-009-0161-2
-- Han, J., Kamber, M. ve Pei, J. (2012). *Data Mining: Concepts and Techniques* (3. baskı). Morgan Kaufmann.
-- Pedregosa, F. vd. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, 12, 2825–2830.
-- Raschka, S. (2018). MLxtend. *Journal of Open Source Software*, 3(24), 638. https://doi.org/10.21105/joss.00638
+- Antonio, N., de Almeida, A. ve Nunes, L. (2019). *Hotel booking demand datasets*. Data in Brief, 22, 41–49. https://doi.org/10.1016/j.dib.2018.11.126
+- Kaufman, S., Rosset, S., Perlich, C. ve Stitelman, O. (2012). *Leakage in data mining: Formulation, detection, and avoidance*. ACM Transactions on Knowledge Discovery from Data, 6(4), Article 15. https://doi.org/10.1145/2382577.2382579
+- Dietterich, T. G. (1998). *Approximate statistical tests for comparing supervised classification learning algorithms*. Neural Computation, 10(7), 1895–1923. https://doi.org/10.1162/089976698300017197
+- Wu, T., Chen, Y. ve Han, J. (2010). *Re-examination of interestingness measures in pattern mining: A unified framework*. Data Mining and Knowledge Discovery, 21, 371–397. https://doi.org/10.1007/s10618-009-0161-2
+- TidyTuesday (2020-02-11). *Hotels* veri dosyası (Antonio vd. verisinin H1 + H2 birleşik kopyası). https://github.com/rfordatascience/tidytuesday/tree/main/data/2020/2020-02-11
 - Frank, E., Hall, M. A. ve Witten, I. H. (2016). *The WEKA Workbench*. Online Appendix for "Data Mining: Practical Machine Learning Tools and Techniques" (4. baskı). Morgan Kaufmann.
+- Pedregosa, F. vd. (2011). *Scikit-learn: Machine learning in Python*. Journal of Machine Learning Research, 12, 2825–2830.
+- Raschka, S. (2018). *MLxtend: Providing machine learning and data science utilities and extensions to Python's scientific computing stack*. Journal of Open Source Software, 3(24), 638. https://doi.org/10.21105/joss.00638
